@@ -6,13 +6,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
 				.withUser("admin")
 				.password("{noop}wachtwoordVoorBoeken")
-				.roles(Roles.WEBSITE_ADMIN);
+				.roles(Role.ADMIN);
 	}
 
 	@Override

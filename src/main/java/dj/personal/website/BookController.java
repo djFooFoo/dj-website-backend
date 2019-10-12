@@ -1,10 +1,8 @@
 package dj.personal.website;
 
 import static java.util.stream.Collectors.*;
-import static java.util.stream.Collectors.toSet;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 import javax.annotation.security.RolesAllowed;
 
@@ -13,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController()
-public class BookController {
+class BookController {
 	private final BookRepository bookRepository;
 
 	@Autowired
@@ -22,7 +20,7 @@ public class BookController {
 	}
 
 	@GetMapping("api/books")
-	@RolesAllowed(Roles.WEBSITE_ADMIN)
+	@RolesAllowed(Role.ADMIN)
 	public Collection<BookDTO> findAll() {
 		return bookRepository.findAll()
 				.stream()
