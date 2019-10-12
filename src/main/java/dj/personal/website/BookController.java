@@ -19,12 +19,11 @@ class BookController {
 		this.bookRepository = bookRepository;
 	}
 
-	@GetMapping("api/books")
+	@GetMapping("api/book")
 	@RolesAllowed(Role.ADMIN)
 	public Collection<BookDTO> findAll() {
 		return bookRepository.findAll()
 				.stream()
-				.sorted(Book::compareTo)
 				.map(Book::toDTO)
 				.collect(toList());
 	}
