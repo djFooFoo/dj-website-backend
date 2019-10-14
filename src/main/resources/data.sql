@@ -1,4 +1,5 @@
 INSERT INTO book (title, year_read) VALUES
+    ('The Passionate Programmer: Creating a Remarkable Career in Software Development', 2019),
     ('Oracle Certified Associate Java SE 8 Programmer I Study Guide', 2016),
     ('Ng-book: the complete book on Angular', 2019),
     ('Oracle Certified Professional Java SE 8 Programmer II Study Guide', 2019),
