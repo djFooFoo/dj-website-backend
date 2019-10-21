@@ -1,0 +1,19 @@
+The Passionate Programmer: Creating a Remarkable Career in Software Development
+Oracle Certified Associate Java SE 8 Programmer I Study Guide
+Ng-book: the complete book on Angular
+Oracle Certified Professional Java SE 8 Programmer II Study Guide
+The Clean Coder: A code of Conduct for Professional Programmers
+Effective Java: A Programming Language Guide
+Clean Code: A Handbook of Agile Software Craftsmanship
+Head First design patterns
+Fundamentals of Deep Learning
+Succeeding with Agile: Software Development Using Scrum
+The Elements of Scrum
+7 Habits of highly effective people
+How to win friends and influence people
+AngularJS
+HTML5 & CSS3 For The Real World
+JUnit in Action
+Mastering Unit Testing Using Mockito and JUnit
+Spring in Action
+Java Persistence with Hibernate
