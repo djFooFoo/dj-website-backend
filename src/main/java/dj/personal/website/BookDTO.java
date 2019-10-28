@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 class BookDTO {
-	private final Integer yearRead;
+	private final Long isbn;
 	private final String title;
+	private final String authors;
+	private final Integer yearRead;
 }

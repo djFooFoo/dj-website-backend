@@ -25,13 +25,14 @@ import org.springframework.test.web.servlet.result.JsonPathResultMatchers;
 class BookControllerTest {
 
 	private static final JsonPathResultMatchers JSON_PATH_ALL_TITLES = jsonPath("$[*].title");
+	private static final String API_GET_BOOKS = "/api/book";
 	@Autowired
 	private MockMvc mockMvc;
 
 	@Test
 	@WithMockUser(username = "jos de admin", roles = "website-admin")
 	void findAllBooksReturnsAllBooksReadInProfessionalCareer() throws Exception {
-		MockHttpServletRequestBuilder requestBuilder = get("/api/book");
+		MockHttpServletRequestBuilder requestBuilder = get(API_GET_BOOKS);
 
 		mockMvc.perform(requestBuilder)
 				.andDo(print())

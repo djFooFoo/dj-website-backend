@@ -1,8 +1,9 @@
 package dj.personal.website;
 
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.toList;
 
 import java.util.Collection;
+import java.util.Comparator;
 
 import javax.annotation.security.RolesAllowed;
 
@@ -25,6 +26,7 @@ class BookController {
 		return bookRepository.findAll()
 				.stream()
 				.map(Book::toDTO)
+				.sorted(Comparator.comparing(BookDTO::getTitle))
 				.collect(toList());
 	}
 }
