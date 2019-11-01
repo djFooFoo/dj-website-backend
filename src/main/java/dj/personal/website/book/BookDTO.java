@@ -1,4 +1,4 @@
-package dj.personal.website;
+package dj.personal.website.book;
 
 import lombok.Builder;
 import lombok.Data;

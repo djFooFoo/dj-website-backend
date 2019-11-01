@@ -1,6 +1,6 @@
 package dj.personal.website;
 
-final class Role {
+public final class Role {
 	private Role() { }
-	static final String ADMIN = "website-admin";
+	public static final String ADMIN = "website-admin";
 }
