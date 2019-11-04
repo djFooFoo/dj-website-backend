@@ -167,9 +167,9 @@ values ('nl', 'Full-Stack Developer', 'Full-Stack ontwikkelaar'),
        ('fr', 'Java Developer', 'Développeur Java');
 
 insert into translated_value (language, key, value)
-values ('nl', 'fod.justice.time.span', 'Septembre 2018 à ce jour'),
+values ('nl', 'fod.justice.time.span', 'September 2018 - heden'),
        ('en', 'fod.justice.time.span', 'September 2018 - present'),
-       ('fr', 'fod.justice.time.span', 'September 2018 - heden');
+       ('fr', 'fod.justice.time.span', 'Septembre 2018 à ce jour');
 
 insert into translated_value (language, key, value)
 values ('nl', 'ravago.time.span', 'Mei 2017 - Augustus 2018'),
