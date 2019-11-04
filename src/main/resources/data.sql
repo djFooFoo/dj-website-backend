@@ -68,7 +68,7 @@ values ('nl', 'Jeanne Boyarsky and Scott Selikoff', 'Jeanne Boyarsky en Scott Se
 insert into project (id, icon, client, job_title, job_description, time_span)
 values (3,
         'fa-file',
-        'Federale Overheidsdienst Justitie',
+        'fod.justice',
         'Full-Stack Developer',
         'fod.justice.description',
         'fod.justice.time.span'),
@@ -140,8 +140,9 @@ values ('Java 8', 3),
        ('Node', 3);*/
 
 insert into translated_value (language, key, value)
-values ('fr', 'Federale Overheidsdienst Justitie', 'Service Public Fédéral Justice'),
-       ('en', 'Federale Overheidsdienst Justitie', 'Federal Public Service Justice');
+values ('fr', 'fod.justice', 'Service Public Fédéral Justice'),
+       ('nl', 'fod.justice', 'Federale Overheidsdienst Justitie'),
+       ('en', 'fod.justice', 'Federal Public Service Justice');
 
 insert into translated_value (language, key, value)
 values ('nl', 'fod.justice.description', 'Uit respect voor de klant wordt hier momenteel niets over bekend gemaakt.'),
