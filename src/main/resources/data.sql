@@ -138,3 +138,7 @@ values ('Java 8', 3),
        ('Swagger', 3),
        ('Cypress', 3),
        ('Node', 3);
+
+insert into translated_value (language, key, value)
+values ('fr', 'Federale Overheidsdienst Justitie', 'Service Public Fédéral Justice'),
+       ('en', 'Federale Overheidsdienst Justitie', 'Federal Public Service Justice');
