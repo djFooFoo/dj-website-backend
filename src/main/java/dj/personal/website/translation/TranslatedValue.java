@@ -3,6 +3,7 @@ package dj.personal.website.translation;
 import java.io.Serializable;
 import java.util.AbstractMap;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ class TranslatedValue {
 	@EmbeddedId
 	private LanguageKey languageKey;
 
+	@Column(columnDefinition = "TEXT")
 	private String value;
 
 	AbstractMap.SimpleEntry<String, String> createKeyAndValuePair() {
