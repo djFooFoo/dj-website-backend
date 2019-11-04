@@ -70,7 +70,7 @@ values (3,
         'fa-file',
         'Federale Overheidsdienst Justitie',
         'Full-Stack Developer',
-        'De ontwikkeling van een modern document management systeem dat binnen FOD justitie in gebruik genomen gaat worden. De hoofdfunctionaliteiten van deze service zijn het toelaten van het opslaan van eender welk type document, het annoteren/taggen van documenten, het plaatsen van reacties, het leggen van associaties en het geavanceerd zoeken op documenten, tags etc.',
+        'fod.justice.description',
         'September 2018 - nu'),
        (2, 'fa-tree',
         'Ravago',
@@ -116,7 +116,7 @@ values ('Java 6', 2),
        ('Docker', 2);
 
 
-insert into technology (name, project_id)
+/*insert into technology (name, project_id)
 values ('Java 8', 3),
        ('Spring', 3),
        ('Angular 8', 3),
@@ -137,8 +137,14 @@ values ('Java 8', 3),
        ('Typescript', 3),
        ('Swagger', 3),
        ('Cypress', 3),
-       ('Node', 3);
+       ('Node', 3);*/
 
 insert into translated_value (language, key, value)
 values ('fr', 'Federale Overheidsdienst Justitie', 'Service Public Fédéral Justice'),
-       ('en', 'Federale Overheidsdienst Justitie', 'Federal Public Service Justice');
+       ('en', 'Federale Overheidsdienst Justitie', 'Federal Public Service Justice'),
+       ('nl', 'fod.justice.description', 'Uit respect voor de klant wordt hier momenteel niets over bekend gemaakt.'),
+       ('fr', 'fod.justice.description', 'Par respect pour le client, rien n''est annoncé pour l''instant.'),
+       ('en', 'fod.justice.description', 'Out of respect for the customer, nothing is being announced about this at the moment..');
+/*       ('nl', 'fod.justice.description', 'De ontwikkeling van een modern document management systeem dat binnen FOD justitie in gebruik genomen gaat worden. De hoofdfunctionaliteiten van deze service zijn het toelaten van het opslaan van eender welk type document, het annoteren/taggen van documenten, het plaatsen van reacties, het leggen van associaties en het geavanceerd zoeken op documenten, tags etc.'),
+       ('fr', 'fod.justice.description', 'L''élaboration d''un système moderne de gestion des documents qui sera mis en œuvre au sein du SFP Justice. Les principales fonctionnalités de ce service sont de permettre le stockage de tout type de document, l''annotation/étiquetage de documents, le placement des réponses, la création d''associations et la recherche avancée sur les documents, tags, etc.'),
+       ('en', 'fod.justice.description', 'The development of a modern document management system that will be put into use within the FPS Justice. The main functionalities of this service are to allow the storage of any type of document, the annotation/tagging of documents, the placement of comments, the creation of associations and the advanced search on documents, tags, etc.')*/
