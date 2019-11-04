@@ -71,17 +71,17 @@ values (3,
         'Federale Overheidsdienst Justitie',
         'Full-Stack Developer',
         'fod.justice.description',
-        'September 2018 - nu'),
+        'fod.justice.time.span'),
        (2, 'fa-tree',
         'Ravago',
         'Java Developer',
         'ravago.description',
-        'Mei 2017 - Augustus 2018'),
+        'ravago.time.span'),
        (1, 'fa-headphones',
         'Bose',
         'Java Developer',
         'bose.description',
-        'Oktober 2016 - Maart 2017');
+        'bose.time.span');
 
 insert into technology (name, project_id)
 values ('Java 8', 1),
@@ -141,8 +141,10 @@ values ('Java 8', 3),
 
 insert into translated_value (language, key, value)
 values ('fr', 'Federale Overheidsdienst Justitie', 'Service Public Fédéral Justice'),
-       ('en', 'Federale Overheidsdienst Justitie', 'Federal Public Service Justice'),
-       ('nl', 'fod.justice.description', 'Uit respect voor de klant wordt hier momenteel niets over bekend gemaakt.'),
+       ('en', 'Federale Overheidsdienst Justitie', 'Federal Public Service Justice');
+
+insert into translated_value (language, key, value)
+values ('nl', 'fod.justice.description', 'Uit respect voor de klant wordt hier momenteel niets over bekend gemaakt.'),
        ('fr', 'fod.justice.description', 'Par respect pour le client, rien n''est annoncé pour l''instant.'),
        ('en', 'fod.justice.description', 'Out of respect for the customer, nothing is being announced about this at the moment.'),
        ('nl', 'ravago.description',
@@ -151,10 +153,33 @@ values ('fr', 'Federale Overheidsdienst Justitie', 'Service Public Fédéral Jus
         'Le développement d''un outil ERP personnalisé qui est utilisé par toutes les sociétés du groupe mondial <a href="https://www.ravago.com/">Ravago</a>. Les principales fonctions de ce système sont la passation des commandes, l''organisation du transport et l''établissement des factures. Le plus grand défi que j''ai trouvé ici était le remaniement d''un code souvent ancien en une nouvelle architecture performante. Pour soutenir les nouveaux développements, un cadre E2E a été construit à côté de l''application. En plus de mes fonctions de développeur agile, j''ai effectué des déploiements en UAT et aidé à la coordination des versions. J''ai aussi été scrum master adjoint pendant un certain temps.'),
        ('en', 'ravago.description',
         'The development of a custom ERP tool that is used by all companies within the global <a href="https://www.ravago.com/">Ravago</a> company group. The main functions of this system are placing orders, arranging transport and creating invoices. The biggest challenge I found here was the refactoring of often old code to a performing new architecture. To support the new developments, an E2E framework was built next to the application. In addition to my functions as an agile developer, I carried out deploys to UAT and helped with the release coordination. I was also deputy Scrum Master for a period of time.'),
-       ('nl', 'bose.description', 'Het ontwikkelen van een wereldwijde website voor de bedrijven die klant zijn bij Bose. Via deze <a href="https://reseller.bose.com/en_us/landingpage.html">website</a> kunnen bedrijven bestellingen plaatsen, reparaties uitvoeren, Bose producten omruilen en zoveel meer. Het project startte in Genk en verhuisde later naar Maastricht, ik maakte deel uit van het agile developer team <a href="https://harrypotter.fandom.com/wiki/Alastor_Moody">Moody</a>.'),
-       ('fr', 'bose.description', 'Développement d''un site Web mondial pour les entreprises clientes de Bose. Ce <a href="https://reseller.bose.com/en_us/landingpage.html">website</a> permet aux entreprises de passer des commandes, d''effectuer des réparations, d''échanger des produits Bose et bien plus encore. Le projet a commencé à Genk et s''est ensuite déplacé à Maastricht, je faisais partie de l''équipe de développement agile <a href="https://harrypotter.fandom.com/wiki/Alastor_Moody">Moody</a>.'),
-       ('en', 'bose.description', 'Developing a global website for the companies that are customers of Bose. This <a href="https://reseller.bose.com/en_us/landingpage.html">website</a> allows companies to place orders, perform repairs, exchange Bose products and much more. The project started in Genk and later moved to Maastricht, I was part of the agile developer team <a href="https://harrypotter.fandom.com/wiki/Alastor_Moody">Moody</a>.');
+       ('nl', 'bose.description',
+        'Het ontwikkelen van een wereldwijde website voor de bedrijven die klant zijn bij Bose. Via deze <a href="https://reseller.bose.com/en_us/landingpage.html">website</a> kunnen bedrijven bestellingen plaatsen, reparaties uitvoeren, Bose producten omruilen en zoveel meer. Het project startte in Genk en verhuisde later naar Maastricht, ik maakte deel uit van het agile developer team <a href="https://harrypotter.fandom.com/wiki/Alastor_Moody">Moody</a>.'),
+       ('fr', 'bose.description',
+        'Développement d''un site Web mondial pour les entreprises clientes de Bose. Ce <a href="https://reseller.bose.com/en_us/landingpage.html">website</a> permet aux entreprises de passer des commandes, d''effectuer des réparations, d''échanger des produits Bose et bien plus encore. Le projet a commencé à Genk et s''est ensuite déplacé à Maastricht, je faisais partie de l''équipe de développement agile <a href="https://harrypotter.fandom.com/wiki/Alastor_Moody">Moody</a>.'),
+       ('en', 'bose.description',
+        'Developing a global website for the companies that are customers of Bose. This <a href="https://reseller.bose.com/en_us/landingpage.html">website</a> allows companies to place orders, perform repairs, exchange Bose products and much more. The project started in Genk and later moved to Maastricht, I was part of the agile developer team <a href="https://harrypotter.fandom.com/wiki/Alastor_Moody">Moody</a>.');
 
+insert into translated_value (language, key, value)
+values ('nl', 'Full-Stack Developer', 'Full-Stack ontwikkelaar'),
+       ('fr', 'Full-Stack Developer', 'Développeur de pile complète'),
+       ('nl', 'Java Developer', 'Java ontwikkelaar'),
+       ('fr', 'Java Developer', 'Développeur Java');
+
+insert into translated_value (language, key, value)
+values ('nl', 'fod.justice.time.span', 'Septembre 2018 à ce jour'),
+       ('en', 'fod.justice.time.span', 'September 2018 - present'),
+       ('fr', 'fod.justice.time.span', 'September 2018 - heden');
+
+insert into translated_value (language, key, value)
+values ('nl', 'ravago.time.span', 'Mei 2017 - Augustus 2018'),
+       ('en', 'ravago.time.span', 'May 2017 - August 2018'),
+       ('fr', 'ravago.time.span', 'Mai 2017 - Août 2018');
+
+insert into translated_value (language, key, value)
+values ('nl', 'bose.time.span', 'Oktober 2016 - Maart 2017'),
+       ('en', 'bose.time.span', 'October 2016 - March 2017'),
+       ('fr', 'bose.time.span', 'Octobre 2016 - Mars 2017');
 
 /*       ('nl', 'fod.justice.description', 'De ontwikkeling van een modern document management systeem dat binnen FOD justitie in gebruik genomen gaat worden. De hoofdfunctionaliteiten van deze service zijn het toelaten van het opslaan van eender welk type document, het annoteren/taggen van documenten, het plaatsen van reacties, het leggen van associaties en het geavanceerd zoeken op documenten, tags etc.'),
        ('fr', 'fod.justice.description', 'L''élaboration d''un système moderne de gestion des documents qui sera mis en œuvre au sein du SFP Justice. Les principales fonctionnalités de ce service sont de permettre le stockage de tout type de document, l''annotation/étiquetage de documents, le placement des réponses, la création d''associations et la recherche avancée sur les documents, tags, etc.'),
