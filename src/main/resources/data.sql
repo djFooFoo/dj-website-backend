@@ -64,3 +64,77 @@ values ('nl', 'Jeanne Boyarsky and Scott Selikoff', 'Jeanne Boyarsky en Scott Se
        ('nl', 'Cornelis Bauer and Gavin King', 'Cornelis Bauer en Gavin King'),
        ('fr', 'Cornelis Bauer and Gavin King', 'Cornelis Bauer et Gavin King')
 ;
+
+insert into project (id, icon, client, job_title, job_description, time_span)
+values (3,
+        'fa-file',
+        'Federale Overheidsdienst Justitie',
+        'Full-Stack Developer',
+        'De ontwikkeling van een modern document management systeem dat binnen FOD justitie in gebruik genomen gaat worden. De hoofdfunctionaliteiten van deze service zijn het toelaten van het opslaan van eender welk type document, het annoteren/taggen van documenten, het plaatsen van reacties, het leggen van associaties en het geavanceerd zoeken op documenten, tags etc.',
+        'September 2018 - nu'),
+       (2, 'fa-tree',
+        'Ravago',
+        'Java Developer',
+        'Het ontwikkelen van een custom ERP tool die door alle bedrijven binnen de wereldwijde <a href="https://www.ravago.com/">Ravago</a> company group gebruikt wordt. De belangrijkste functies van dit systeem zijn het plaatsen van orders, het regelen van transport en het aanmaken van invoices. De grootste uitdaging vond ik hier in het refactoren van vaak oude code naar een performante nieuwe architectuur. Om de nieuwe ontwikkelingen te ondersteunen werd er naast de applicatie een end-to-end framework gebouwd. Naast mijn functies als agile developer voerde ik deploys uit naar UAT en hielp ik met de release coördinatie. Daarnaast was ik gedurende een periode plaatsvervangend scrum master.',
+        'Mei 2017 - Augustus 2018'),
+       (1, 'fa-headphones',
+        'Bose',
+        'Java Developer',
+        'Het ontwikkelen van een wereldwijde website voor de bedrijven die klant zijn bij Bose. Via deze <a href="https://reseller.bose.com/en_us/landingpage.html">website</a> kunnen bedrijven bestellingen plaatsen, reparaties uitvoeren, Bose producten omruilen en zoveel meer. Het project startte in Genk en verhuisde later naar Maastricht, ik maakte deel uit van het agile developer team <a href="https://harrypotter.fandom.com/wiki/Alastor_Moody">Moody</a>.',
+        'Oktober 2016 - Maart 2017');
+
+insert into technology (name, project_id)
+values ('Java 8', 1),
+       ('Javascript', 1),
+       ('SCSS', 1),
+       ('Groovy', 1),
+       ('HTML5', 1),
+       ('AEM', 1),
+       ('Bamboo', 1),
+       ('Mockito', 1),
+       ('PowerMock', 1),
+       ('Hybris', 1),
+       ('Spring', 1),
+       ('Intellij', 1),
+       ('Scrum/Agile', 1);
+
+insert into technology (name, project_id)
+values ('Java 6', 2),
+       ('Spring', 2),
+       ('Selenium', 2),
+       ('JBoss', 2),
+       ('Mockito', 2),
+       ('SQL', 2),
+       ('Intellij', 2),
+       ('Confluence', 2),
+       ('Jira', 2),
+       ('Git', 2),
+       ('Bamboo', 2),
+       ('JSP', 2),
+       ('Scrum/Agile', 2),
+       ('Jenkins', 2),
+       ('Docker', 2);
+
+
+insert into technology (name, project_id)
+values ('Java 8', 3),
+       ('Spring', 3),
+       ('Angular 8', 3),
+       ('Jasmine', 3),
+       ('CouchDB', 3),
+       ('Elastic', 3),
+       ('Mockito', 3),
+       ('JUnit', 3),
+       ('REST Assured', 3),
+       ('AssertJ', 3),
+       ('Intellij', 3),
+       ('Jira', 3),
+       ('Git', 3),
+       ('Jenkins', 3),
+       ('Scrum/Agile', 3),
+       ('Keycloak', 3),
+       ('Docker', 3),
+       ('Typescript', 3),
+       ('Swagger', 3),
+       ('Cypress', 3),
+       ('Node', 3);
