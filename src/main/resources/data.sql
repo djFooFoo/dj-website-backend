@@ -1,5 +1,6 @@
 INSERT INTO book (isbn, title, authors, year_read)
-VALUES (9781934356340, 'The Passionate Programmer: Creating a Remarkable Career in Software Development', 'Chad Fowler', 2019),
+VALUES (9781491954164, 'Java 9 Modularity: Patterns and practices for developing maintainable applications', 'Sander Mak and Paul Baker', 2019),
+       (9781934356340, 'The Passionate Programmer: Creating a Remarkable Career in Software Development', 'Chad Fowler', 2019),
        (9781118957400, 'Oracle Certified Associate Java SE 8 Programmer I Study Guide', 'Jeanne Boyarsky and Scott Selikoff', 2016),
        (9781985170285, 'Ng-book: the complete book on Angular', 'Nathan Murray, Felipe Coury, Ari Lerner and Carlos Taborda', 2019),
        (9781119067900, 'Oracle Certified Professional Java SE 8 Programmer II Study Guide', 'Jeanne Boyarsky and Scott Selikoff', 2019),
@@ -20,7 +21,9 @@ VALUES (9781934356340, 'The Passionate Programmer: Creating a Remarkable Career 
        (9781617290459, 'Java Persistence with Hibernate', 'Cornelis Bauer and Gavin King', 2017);
 
 insert into translated_value (language, key, value)
-values ('nl', '7 Habits of highly effective people', 'De zeven eigenschappen van effectief leiderschap'),
+values ('nl', 'Java 9 Modularity: Patterns and practices for developing maintainable applications', 'Java 9 Modularity: Patronen en praktijken voor het ontwikkelen van onderhoudbare toepassingen'),
+       ('fr', 'Java 9 Modularity: Patterns and practices for developing maintainable applications', 'Java 9 Modularity: Modèles et pratiques pour le développement d''applications maintenables'),
+       ('nl', '7 Habits of highly effective people', 'De zeven eigenschappen van effectief leiderschap'),
        ('fr', '7 Habits of highly effective people', 'Les 7 habitudes de ceux qui réalisent tout ce qu''ils entreprennent'),
        ('nl', 'The Passionate Programmer: Creating a Remarkable Career in Software Development', 'The Passionate Programmer: Het creëren van een opmerkelijke carrière in software-ontwikkeling'),
        ('fr', 'The Passionate Programmer: Creating a Remarkable Career in Software Development', 'The Passionate Programmer : Créer une carrière remarquable dans le développement de logiciels'),
@@ -62,7 +65,9 @@ values ('nl', 'Jeanne Boyarsky and Scott Selikoff', 'Jeanne Boyarsky en Scott Se
        ('nl', 'Ted Husted and Vincent Massol', 'Ted Husted en Vincent Massol'),
        ('fr', 'Ted Husted and Vincent Massol', 'Ted Husted et Vincent Massol'),
        ('nl', 'Cornelis Bauer and Gavin King', 'Cornelis Bauer en Gavin King'),
-       ('fr', 'Cornelis Bauer and Gavin King', 'Cornelis Bauer et Gavin King')
+       ('fr', 'Cornelis Bauer and Gavin King', 'Cornelis Bauer et Gavin King'),
+       ('nl', 'Sander Mak and Paul Baker', 'Sander Mak en Paul Baker'),
+       ('fr', 'Sander Mak and Paul Baker', 'Sander Mak et Paul Baker')
 ;
 
 insert into project (id, icon, client, job_title, job_description, time_span)
