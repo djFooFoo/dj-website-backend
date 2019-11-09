@@ -21,11 +21,14 @@ class Blogpost {
 
 	private String url;
 
+	private String category;
+
 	BlogpostDTO toDTO() {
 		return BlogpostDTO.builder()
 				.title(title)
 				.publicationDate(publicationDate)
 				.url(url)
+				.category(category)
 				.build();
 	}
 }

@@ -11,4 +11,5 @@ class BlogpostDTO {
 	private final String title;
 	private final LocalDate publicationDate;
 	private final String url;
+	private final String category;
 }
