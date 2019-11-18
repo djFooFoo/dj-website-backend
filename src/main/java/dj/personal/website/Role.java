@@ -1,6 +1,8 @@
 package dj.personal.website;
 
-public final class Role {
-	private Role() { }
-	public static final String ADMIN = "website-admin";
+/**
+ * @author dj
+ */
+public interface Role {
+	String ADMIN = "website-admin";
 }
