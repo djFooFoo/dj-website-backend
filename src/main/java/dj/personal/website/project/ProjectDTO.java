@@ -13,6 +13,5 @@ class ProjectDTO {
 	private String jobTitle;
 	private String jobDescription;
 	private String timeSpan;
-
 	private Set<String> technologies;
 }

@@ -1,15 +1,11 @@
-package dj.personal.website.translation;
+package dj.personal.website.certificate;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * @author dj
- */
-
-public enum ApplicationLocale {
-	EN,
-	NL,
-	FR;
+enum CertificateType {
+	COURSE,
+	CERTIFICATE,
+	AWARD;
 
 	@JsonValue
 	public String toValue() {
