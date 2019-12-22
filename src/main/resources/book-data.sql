@@ -13,6 +13,7 @@ VALUES (9781491954164, 'Java 9 Modularity: Patterns and practices for developing
        (9780982866917, 'The Elements of Scrum', 'Christopher A. Sims and Hillary Louise Johnson', 2016),
        (9781511317290, '7 Habits of highly effective people', 'Stephen Covey', 2018),
        (9780671027032, 'How to win friends and influence people', 'Dale Carnegie', 2018),
+       (9780143124047, 'How to create a mind: The Secret of Human Thought', 'Ray Kurzweil', 2018),
        (9781449344856, 'AngularJS', 'Brad Green and Shyam Seshadri', 2017),
        (9780980846904, 'HTML5 & CSS3 For The Real World', 'Alexis Goldstein, Estelle Weyl and Louis Lazaris', 2017),
        (9781935182023, 'JUnit in Action', 'Ted Husted and Vincent Massol', 2016),
