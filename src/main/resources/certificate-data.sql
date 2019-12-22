@@ -1,5 +1,6 @@
 insert into certificate (name, issue_date, organization, credential_url, certificate_type)
-values ('Oracle Certified Associate, Java SE 8 Programmer', TO_DATE('09/2016', 'MM/YYYY'), 'Oracle', 'https://www.youracclaim.com/badges/3ec8731f-0c1a-4075-bdf0-b6c8d5f0cbe3/linked_in_profile', 1),
+values ('Oracle Certified Professional: Java SE 11 Programmer', TO_DATE('12/2019', 'MM/YYYY'), 'Oracle', 'https://www.youracclaim.com/badges/6479b37c-a8aa-4412-adc4-f7ada40176a6/public_url', 1),
+       ('Oracle Certified Associate, Java SE 8 Programmer', TO_DATE('09/2016', 'MM/YYYY'), 'Oracle', 'https://www.youracclaim.com/badges/3ec8731f-0c1a-4075-bdf0-b6c8d5f0cbe3/public_url', 1),
        ('Professional Scrum Developer I', TO_DATE('04/2017', 'MM/YYYY'), 'Scrum.org', 'https://www.scrum.org/user/243806', 1),
        ('EXIN Agile Scrum Foundation', TO_DATE('09/2019', 'MM/YYYY'), 'Exin', 'https://exeed.pro/badge/43740', 1),
        ('deep.learning.specialization', TO_DATE('05/2019', 'MM/YYYY'), 'Coursera', 'https://www.coursera.org/account/accomplishments/specialization/SXJNRZSW2FNQ', 0),
