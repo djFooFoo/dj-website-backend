@@ -3,7 +3,8 @@ values ('blogpost.title.1', TO_DATE('12/02/2018', 'DD/MM/YYYY'), 'https://www.co
        ('Machine learning on source code', TO_DATE('08/06/2018', 'DD/MM/YYYY'), 'https://www.continuum.be/2018/06/08/machine-learning-on-source-code/', 'AI'),
        ('Deep Instinct – Malware detection using deep learning', TO_DATE('02/11/2018', 'DD/MM/YYYY'), 'https://www.continuum.be/2018/11/02/deep-instinct-malware-detection-using-deep-learning/', 'AI'),
        ('Destructuring', TO_DATE('08/05/2019', 'DD/MM/YYYY'), 'https://www.continuum.be/2019/05/08/destructuring-javascript/', 'Frontend'),
-       ('blogpost.title.5', TO_DATE('07/12/2019', 'DD/MM/YYYY'), 'https://medium.com/@dieterjordens/fantastic-translations-and-where-to-find-them-421ee46f59db?source=friends_link&sk=7ddb4e05714d19bcf4671fbc0856fdd1', 'Frontend')
+       ('blogpost.title.5', TO_DATE('07/12/2019', 'DD/MM/YYYY'), 'https://medium.com/@dieterjordens/fantastic-translations-and-where-to-find-them-421ee46f59db?source=friends_link&sk=7ddb4e05714d19bcf4671fbc0856fdd1', 'Frontend'),
+       ('blogpost.title.6', TO_DATE('09/01/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-create-a-websocket-in-python-b68d65dbd549?source=friends_link&sk=556dcc527edf1d277053396332a270bd', 'Backend')
 ;
 insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.1', 'Hey Alexa! Order us two pizzas please.'),
@@ -14,3 +15,8 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.5', 'Angular & Ngx-Translate: Fantastic Translations And Where To Find Them'),
        ('nl', 'blogpost.title.5', 'Angular & Ngx-Translate: Fantastische Vertalingen En Waar U Ze Kunt Vinden'),
        ('fr', 'blogpost.title.5', 'Angular & Ngx-Translate: Traductions Fantastiques Et Où Les Trouver');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.6', 'How To Create a WebSocket in Python: An introduction to WebSockets'),
+       ('nl', 'blogpost.title.6', 'Hoe maak je een WebSocket in Python: Een inleiding tot WebSockets'),
+       ('fr', 'blogpost.title.6', 'Comment créer un WebSocket en Python : Une introduction aux WebSockets');
