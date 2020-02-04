@@ -36,5 +36,5 @@ values ('en', 'blogpost.title.8', 'What Is a UUID and How Are They Generated? A 
 
 insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.9', 'Top 5 AI Conferences To Visit in Europe in 2020. Machine and Deep Learning Conferences in Europe I think have the most interesting line-up this year.'),
-       ('nl', 'blogpost.title.0', 'Top 5 AI-conferenties te bezoeken in Europa in 2020. Deze machine en Deep Learning Conferenties in Europa hebben volgens mij de meest interessante line-up dit jaar.'),
+       ('nl', 'blogpost.title.9', 'Top 5 AI-conferenties te bezoeken in Europa in 2020. Deze machine en Deep Learning Conferenties in Europa hebben volgens mij de meest interessante line-up dit jaar.'),
        ('fr', 'blogpost.title.9', 'Les 5 plus grandes conférences sur l''IA à visiter en Europe en 2020. Les conférences sur la machine et l''apprentissage profond en Europe sont, à mon avis, les plus intéressantes cette année.');
