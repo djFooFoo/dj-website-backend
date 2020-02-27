@@ -8,7 +8,8 @@ values ('blogpost.title.1', TO_DATE('12/02/2018', 'DD/MM/YYYY'), 'https://www.co
        ('blogpost.title.7', TO_DATE('22/01/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/what-goes-into-a-dockerfile-ff0ace591060?source=friends_link&sk=6a4bdaf97cb6e7e76afe8fc733a1023f', 'Programming'),
        ('blogpost.title.8', TO_DATE('29/01/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/what-is-a-uuid-and-how-are-they-generated-17f0acbd7233?source=friends_link&sk=9a136dd22416eccab08ed346b556e6b2', 'Programming'),
        ('blogpost.title.9', TO_DATE('03/02/2020', 'DD/MM/YYYY'), 'https://towardsdatascience.com/top-5-ai-conferences-to-visit-in-europe-in-2020-7a6f068aff34?source=friends_link&sk=f74b76e9f6844de729e3e81cf84b57cc', 'AI'),
-       ('blogpost.title.10', TO_DATE('08/02/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-create-an-angular-dockerfile-75c059e7f8e8?source=friends_link&sk=363c8b21aafe83e1e5f84feed047e969', 'Frontend')
+       ('blogpost.title.10', TO_DATE('08/02/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-create-an-angular-dockerfile-75c059e7f8e8?source=friends_link&sk=363c8b21aafe83e1e5f84feed047e969', 'Frontend'),
+       ('blogpost.title.11', TO_DATE('21/02/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/what-is-modularity-in-java-b1938a2304fd?source=friends_link&sk=202d13eb91c66a8fbec5580290b89c45', 'Backend')
 ;
 insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.1', 'Hey Alexa! Order us two pizzas please.'),
@@ -44,3 +45,8 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.10', 'How to Create an Angular Dockerfile? A step-by-step guide to create an Angular container'),
        ('nl', 'blogpost.title.10', 'Hoe maak je een Angular Dockerfile aan? Een stap-voor-stap handleiding voor het maken van een Angular container.'),
        ('fr', 'blogpost.title.10', 'Comment créer un fichier de docker pour Angular? Un guide étape par étape pour créer un conteneur d''Angular');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.11', 'What Is Modularity in Java? A feature introduced since Java 9'),
+       ('nl', 'blogpost.title.11', 'Wat betekenen modules in Java? Een feature die in Java 9 werd geïntroduceerd...'),
+       ('fr', 'blogpost.title.11', 'Qu''est-ce que la modularité à Java ? Une caractéristique introduite depuis Java 9');
