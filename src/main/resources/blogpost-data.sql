@@ -10,7 +10,8 @@ values ('blogpost.title.1', TO_DATE('12/02/2018', 'DD/MM/YYYY'), 'https://www.co
        ('blogpost.title.9', TO_DATE('03/02/2020', 'DD/MM/YYYY'), 'https://towardsdatascience.com/top-5-ai-conferences-to-visit-in-europe-in-2020-7a6f068aff34?source=friends_link&sk=f74b76e9f6844de729e3e81cf84b57cc', 'AI'),
        ('blogpost.title.10', TO_DATE('08/02/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-create-an-angular-dockerfile-75c059e7f8e8?source=friends_link&sk=363c8b21aafe83e1e5f84feed047e969', 'Frontend'),
        ('blogpost.title.11', TO_DATE('21/02/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/what-is-modularity-in-java-b1938a2304fd?source=friends_link&sk=202d13eb91c66a8fbec5580290b89c45', 'Backend'),
-       ('blogpost.title.12', TO_DATE('10/03/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-does-docker-port-binding-work-b089f23ca4c8?source=friends_link&sk=40c9fbcdc4172bb065711ab554e9b1c2', 'Programming')
+       ('blogpost.title.12', TO_DATE('10/03/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-does-docker-port-binding-work-b089f23ca4c8?source=friends_link&sk=40c9fbcdc4172bb065711ab554e9b1c2', 'Programming'),
+       ('blogpost.title.13', TO_DATE('22/03/2020', 'DD/MM/YYYY'), 'https://medium.com/@dieterjordens/increase-your-face-recognition-models-accuracy-by-improving-face-contrast-a3e71bb6b9fb?source=friends_link&sk=a51fd37b38a9f9770fc424208c93a6a2', 'AI')
 ;
 insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.1', 'Hey Alexa! Order us two pizzas please.'),
@@ -56,3 +57,9 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.12', 'How Does Docker Port Binding Work? Nail this common Docker interview question'),
        ('nl', 'blogpost.title.12', 'Hoe werkt Docker Port Binding? Beantwoordt deze gemeenschappelijke Docker interview vraag zonder moeite'),
        ('fr', 'blogpost.title.12', 'Comment fonctionne Docker Port Binding? Répondez à cette question courante de l''interview de Docker');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.13', 'Increase Your Face Recognition Model’s Accuracy by Improving Face Contrast. Pre-processing images for better results'),
+       ('nl', 'blogpost.title.13', 'Verhoog de nauwkeurigheid van uw gezichtsherkenningsmodel door het gezichtscontrast te verbeteren. Beelden voorbewerken voor betere resultaten'),
+       ('fr', 'blogpost.title.13', 'Augmentez la précision de votre modèle de reconnaissance faciale en améliorant le contraste des visages. Prétraitement des images pour de meilleurs résultats');
+
