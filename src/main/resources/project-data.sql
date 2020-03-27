@@ -78,9 +78,9 @@ values ('fr', 'fod.justice', 'Service Public Fédéral Justice'),
        ('en', 'fod.justice', 'Federal Public Service Justice');
 
 insert into translated_value (language, key, value)
-values ('nl', 'fod.justice.description', 'Uit respect voor de klant wordt hier momenteel niets over bekend gemaakt.'),
-       ('fr', 'fod.justice.description', 'Par respect pour le client, rien n''est annoncé pour l''instant.'),
-       ('en', 'fod.justice.description', 'Out of respect for the customer, nothing is being announced about this at the moment.'),
+values ('nl', 'fod.justice.description', 'Uit respect voor de klant wordt over het huidige project nog niets beschreven op mijn website.'),
+       ('fr', 'fod.justice.description', 'Par respect pour le client, rien n''est décrit sur mon site web concernant le projet en cours.'),
+       ('en', 'fod.justice.description', 'Out of respect for the customer, nothing is described on my website about the current project.'),
        ('nl', 'ravago.description',
         'Het ontwikkelen van een custom ERP tool die door alle bedrijven binnen de wereldwijde <a href="https://www.ravago.com/">Ravago</a> company group gebruikt wordt. De belangrijkste functies van dit systeem zijn het plaatsen van orders, het regelen van transport en het aanmaken van invoices. De grootste uitdaging vond ik hier in het refactoren van vaak oude code naar een performante nieuwe architectuur. Om de nieuwe ontwikkelingen te ondersteunen werd er naast de applicatie een end-to-end framework gebouwd. Naast mijn functies als agile developer voerde ik deploys uit naar UAT en hielp ik met de release coördinatie. Daarnaast was ik gedurende een periode plaatsvervangend scrum master.'),
        ('fr', 'ravago.description',
