@@ -19,7 +19,8 @@ VALUES (9781491954164, 'Java 9 Modularity: Patterns and practices for developing
        (9781935182023, 'JUnit in Action', 'Ted Husted and Vincent Massol', 2016),
        (9781783982509, 'Mastering Unit Testing Using Mockito, JUnit', 'Sujoy Acharya', 2016),
        (9781617291203, 'Spring in Action', 'Craig Walls', 2017),
-       (9781617290459, 'Java Persistence with Hibernate', 'Cornelis Bauer and Gavin King', 2017);
+       (9781617290459, 'Java Persistence with Hibernate', 'Cornelis Bauer and Gavin King', 2017),
+       (9780062803832, 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Bishop, Gary John', 2020);
 
 insert into translated_value (language, key, value)
 values ('nl', '7 Habits of highly effective people', 'De zeven eigenschappen van effectief leiderschap'),
@@ -43,7 +44,9 @@ values ('nl', '7 Habits of highly effective people', 'De zeven eigenschappen van
        ('nl', 'Succeeding with Agile: Software Development Using Scrum', 'Succeeding with Agile: Softwareontwikkeling met behulp van Scrum'),
        ('fr', 'Succeeding with Agile: Software Development Using Scrum', 'Succeeding with Agile: Développement de logiciels à l''aide de Scrum'),
        ('nl', 'How to win friends and influence people', 'Hoe je vrienden maakt en mensen beïnvloedt'),
-       ('fr', 'How to win friends and influence people', 'Comment se faire des amis et influencer les autres')
+       ('fr', 'How to win friends and influence people', 'Comment se faire des amis et influencer les autres'),
+       ('nl', 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Unfu*k Yourself: Stap uit je hoofd en in je leven')
+       ('fr', 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Unfu*k Yourself: Sortez de votre tête et entrez dans votre vie')
 ;
 
 insert into translated_value (language, key, value)
