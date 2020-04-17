@@ -28,7 +28,7 @@ class BookController {
 		return bookRepository.findAll()
 				.stream()
 				.map(Book::toDTO)
-				.sorted(Comparator.comparing(BookDTO::getTitle))
+				.sorted(Comparator.comparing(BookDTO::getYearRead).reversed().thenComparing(BookDTO::getTitle))
 				.collect(toList());
 	}
 }
