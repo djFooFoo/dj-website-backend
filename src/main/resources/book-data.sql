@@ -45,7 +45,7 @@ values ('nl', '7 Habits of highly effective people', 'De zeven eigenschappen van
        ('fr', 'Succeeding with Agile: Software Development Using Scrum', 'Succeeding with Agile: Développement de logiciels à l''aide de Scrum'),
        ('nl', 'How to win friends and influence people', 'Hoe je vrienden maakt en mensen beïnvloedt'),
        ('fr', 'How to win friends and influence people', 'Comment se faire des amis et influencer les autres'),
-       ('nl', 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Unfu*k Yourself: Stap uit je hoofd en in je leven')
+       ('nl', 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Unfu*k Yourself: Stap uit je hoofd en in je leven'),
        ('fr', 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Unfu*k Yourself: Sortez de votre tête et entrez dans votre vie')
 ;
 
