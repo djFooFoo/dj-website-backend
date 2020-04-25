@@ -13,7 +13,8 @@ values ('blogpost.title.1', TO_DATE('12/02/2018', 'DD/MM/YYYY'), 'https://www.co
        ('blogpost.title.12', TO_DATE('10/03/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-does-docker-port-binding-work-b089f23ca4c8?source=friends_link&sk=40c9fbcdc4172bb065711ab554e9b1c2', 'Programming'),
        ('blogpost.title.13', TO_DATE('22/03/2020', 'DD/MM/YYYY'), 'https://towardsdatascience.com/increase-your-face-recognition-models-accuracy-by-improving-face-contrast-a3e71bb6b9fb?source=friends_link&sk=a51fd37b38a9f9770fc424208c93a6a2', 'AI'),
        ('blogpost.title.14', TO_DATE('31/03/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/test-driven-development-attempt-with-jest-and-angular-7e064b76ca2d?source=friends_link&sk=02e853220ce751e054222a67377ac804', 'Frontend'),
-       ('blogpost.title.15', TO_DATE('20/04/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-review-code-in-7-steps-98298003b7ec?source=friends_link&sk=648395f0913696002a267ee4f648a3c6', 'Programming')
+       ('blogpost.title.15', TO_DATE('20/04/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-review-code-in-7-steps-98298003b7ec?source=friends_link&sk=648395f0913696002a267ee4f648a3c6', 'Programming'),
+       ('blogpost.title.16', TO_DATE('23/04/2020', 'DD/MM/YYYY'), 'https://medium.com/@dieterjordens/decouple-tests-with-data-attributes-c920606c5f27?source=friends_link&sk=26885722b8f4f1896a157e2fb5fd060d', 'Frontend')
 ;
 insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.1', 'Hey Alexa! Order us two pizzas please.'),
@@ -74,3 +75,8 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.15', 'How to Review Code in 7 Steps: What the ideal code review process looks like'),
        ('nl', 'blogpost.title.15', 'Hoe review je code in 7 stappen: Hoe ziet het ideale proces voor het beoordelen van code eruit?'),
        ('fr', 'blogpost.title.15', 'Comment réviser le code en 7 étapes : À quoi ressemble le processus idéal de révision d''un code');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.16', 'Decouple Tests With Data Attributes'),
+       ('nl', 'blogpost.title.16', 'Tests ontkoppelen met data attributen'),
+       ('fr', 'blogpost.title.16', 'Découplez vos tests avec des attributs de données');
