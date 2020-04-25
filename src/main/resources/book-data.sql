@@ -21,7 +21,7 @@ VALUES (9781491954164, 'Java 9 Modularity: Patterns and practices for developing
        (9781617291203, 'Spring in Action', 'Craig Walls', 2017),
        (9781617290459, 'Java Persistence with Hibernate', 'Cornelis Bauer and Gavin King', 2017),
        (9780062803832, 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Bishop, Gary John', 2020),
-       (9780134052502, 'The Software Craftsman: Professionalism, Pragmatism, Pride', 'Sandro Mancuso', 2020)
+       (9780134052502, 'The Software Craftsman: Professionalism, Pragmatism, Pride', 'Sandro Mancuso and Robert Cecil Martin', 2020)
        ;
 
 insert into translated_value (language, key, value)
@@ -73,5 +73,7 @@ values ('nl', 'Jeanne Boyarsky and Scott Selikoff', 'Jeanne Boyarsky en Scott Se
        ('nl', 'Cornelis Bauer and Gavin King', 'Cornelis Bauer en Gavin King'),
        ('fr', 'Cornelis Bauer and Gavin King', 'Cornelis Bauer et Gavin King'),
        ('nl', 'Sander Mak and Paul Baker', 'Sander Mak en Paul Baker'),
-       ('fr', 'Sander Mak and Paul Baker', 'Sander Mak et Paul Baker')
+       ('fr', 'Sander Mak and Paul Baker', 'Sander Mak et Paul Baker'),
+       ('nl', 'Sandro Mancuso and Robert Cecil Martin', 'Sandro Mancuso en Robert Cecil Martin'),
+       ('fr', 'Sandro Mancuso and Robert Cecil Martin', 'Sandro Mancuso et Robert Cecil Martin')
 ;
