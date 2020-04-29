@@ -14,7 +14,8 @@ values ('blogpost.title.1', TO_DATE('12/02/2018', 'DD/MM/YYYY'), 'https://www.co
        ('blogpost.title.13', TO_DATE('22/03/2020', 'DD/MM/YYYY'), 'https://towardsdatascience.com/increase-your-face-recognition-models-accuracy-by-improving-face-contrast-a3e71bb6b9fb?source=friends_link&sk=a51fd37b38a9f9770fc424208c93a6a2', 'AI'),
        ('blogpost.title.14', TO_DATE('31/03/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/test-driven-development-attempt-with-jest-and-angular-7e064b76ca2d?source=friends_link&sk=02e853220ce751e054222a67377ac804', 'Frontend'),
        ('blogpost.title.15', TO_DATE('20/04/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-review-code-in-7-steps-98298003b7ec?source=friends_link&sk=648395f0913696002a267ee4f648a3c6', 'Programming'),
-       ('blogpost.title.16', TO_DATE('23/04/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/decouple-tests-with-data-attributes-c920606c5f27?source=friends_link&sk=26885722b8f4f1896a157e2fb5fd060d', 'Frontend')
+       ('blogpost.title.16', TO_DATE('23/04/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/decouple-tests-with-data-attributes-c920606c5f27?source=friends_link&sk=26885722b8f4f1896a157e2fb5fd060d', 'Frontend'),
+       ('blogpost.title.17', TO_DATE('29/04/2020', 'DD/MM/YYYY'), 'https://medium.com/better-programming/how-to-create-a-generator-in-python-5ee587621879?source=friends_link&sk=0017a0f77f44b7f2e896673cfb31d18d', 'Backend')
 ;
 insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.1', 'Hey Alexa! Order us two pizzas please.'),
@@ -80,3 +81,10 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.16', 'Decouple Your Styling and Tests With Data Attributes'),
        ('nl', 'blogpost.title.16', 'Styling en tests ontkoppelen met data attributen'),
        ('fr', 'blogpost.title.16', 'Découplez votre style et vos tests avec des attributs de données');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.17', 'How to Create a Generator in Python'),
+       ('nl', 'blogpost.title.17', 'Hoe maak je een Generator in Python'),
+       ('fr', 'blogpost.title.17', 'Comment créer un générateur en Python');
+
+
