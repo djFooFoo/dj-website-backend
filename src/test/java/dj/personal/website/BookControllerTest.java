@@ -1,55 +1,54 @@
 package dj.personal.website;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.enableLoggingOfRequestAndResponseIfValidationFails;
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
+import static io.restassured.module.mockmvc.RestAssuredMockMvc.webAppContextSetup;
+import static org.hamcrest.Matchers.is;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-import org.springframework.test.web.servlet.result.JsonPathResultMatchers;
+import org.springframework.web.context.WebApplicationContext;
+
+import io.restassured.http.Method;
 
 @SpringBootTest(classes = WebsiteApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
 class BookControllerTest {
 
-	private static final JsonPathResultMatchers JSON_PATH_ALL_TITLES = jsonPath("$[*].title");
 	private static final String API_GET_BOOKS = "/api/book";
+
 	@Autowired
-	private MockMvc mockMvc;
+	private WebApplicationContext webApplicationContext;
 
-	@Test
-	@WithMockUser(username = "jos de admin", roles = "website-admin")
-	void findAllBooksReturnsAllBooksReadInProfessionalCareer() throws Exception {
-		MockHttpServletRequestBuilder requestBuilder = get(API_GET_BOOKS);
-
-		mockMvc.perform(requestBuilder)
-				.andDo(print())
-				.andExpect(status().isOk())
-				.andExpect(JSON_PATH_ALL_TITLES.value(equalTo(allBooksReadInProfessionalCareer())));
-	}
-
-	private List<String> allBooksReadInProfessionalCareer() throws IOException {
-		return Files.readAllLines(Paths.get("src/test/resources/allMyBooks.txt"));
+	@BeforeEach
+	public void setUpRestAssured() {
+		webAppContextSetup(webApplicationContext);
+		enableLoggingOfRequestAndResponseIfValidationFails();
 	}
 
 	@Test
-	void unauthorizedWhenNotHavingWebsiteAdminRole() throws Exception {
-		MockHttpServletRequestBuilder requestBuilder = get("/api/book");
-
-		mockMvc.perform(requestBuilder)
-				.andExpect(status().isUnauthorized());
+	@WithMockUser(username = "admin", roles = "website-admin")
+	void findAllBooksReturnsAllBooksReadInProfessionalCareer() {
+		given()
+				.when()
+				.request(Method.GET, API_GET_BOOKS)
+				.then()
+				.statusCode(HttpStatus.OK.value())
+				.assertThat()
+				.body("[0].title", is("lastReadBook"))
+				.body("[1].title", is("secondLastReadBook"))
+				.body("[2].title", is("thirdLastReadBook"));
 	}
 
+	@Test
+	void unauthorizedWhenNotHavingWebsiteAdminRole() {
+		given()
+				.when()
+				.request(Method.GET, API_GET_BOOKS)
+				.then()
+				.statusCode(HttpStatus.UNAUTHORIZED.value());
+	}
 }
