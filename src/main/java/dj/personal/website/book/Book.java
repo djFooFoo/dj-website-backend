@@ -14,8 +14,8 @@ class Book {
 
 	private int yearRead;
 
-	BookDTO toDTO() {
-		return BookDTO.builder()
+	BookDto toDTO() {
+		return BookDto.builder()
 				.isbn(isbn)
 				.title(title)
 				.authors(authors)

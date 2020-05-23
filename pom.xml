@@ -104,6 +104,15 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.5</version>
+				<configuration>
+					<excludes>
+						<exclude>dj/personal/website/config/**/*</exclude>
+						<exclude>dj/personal/website/blogpost/**/*</exclude>
+						<exclude>dj/personal/website/certificate/**/*</exclude>
+						<exclude>dj/personal/website/project/**/*</exclude>
+						<exclude>dj/personal/website/translation/**/*</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<id>default-prepare-agent</id>
@@ -124,12 +133,12 @@
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0</minimum>
+											<minimum>100%</minimum>
 										</limit>
 										<limit>
 											<counter>BRANCH</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0</minimum>
+											<minimum>100%</minimum>
 										</limit>
 									</limits>
 								</rule>
