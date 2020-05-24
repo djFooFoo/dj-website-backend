@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.http.ContentType;
 
 @SpringBootTest
-class BookControllerIntegrationTest {
+class BookControllerTest {
 
 	private static final String API_GET_BOOKS = "/api/books";
 
@@ -35,24 +35,22 @@ class BookControllerIntegrationTest {
 
 	@Test
 	@WithMockUser(username = "admin", roles = { "website-admin" })
-	void whenSearchingForBooksWithRole_getBooks() {
-		BookMatcher[] expectedBooks = {
-				BookMatcher.matchesBook(BookDto.builder().isbn(1L).title("book1").authors("author1").yearRead(2020).build()),
-				BookMatcher.matchesBook(BookDto.builder().isbn(2L).title("book2").authors("author2").yearRead(2019).build()),
-				BookMatcher.matchesBook(BookDto.builder().isbn(3L).title("book3").authors("author3").yearRead(2018).build())
-		};
-
+	void givenRoleAdmin_findBooksReturnsBooksFromBookDataSqlFile() {
 		given()
 				.when()
 				.get(API_GET_BOOKS)
 				.then()
 				.assertThat().statusCode(HttpStatus.OK.value())
 				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("$", contains(expectedBooks));
+				.assertThat().body("$", contains(
+				BookMatcher.matchesBook(BookDto.builder().isbn(1L).title("book1").authors("author1").yearRead(2020).build()),
+				BookMatcher.matchesBook(BookDto.builder().isbn(2L).title("book2").authors("author2").yearRead(2019).build()),
+				BookMatcher.matchesBook(BookDto.builder().isbn(3L).title("book3").authors("author3").yearRead(2018).build()))
+		);
 	}
 
 	@Test
-	void whenSearchingForBooksWithoutRole_returnsUnauthorized() {
+	void givenNoRole_FindBooksReturnsUnauthorized() {
 		given()
 				.when()
 				.get(API_GET_BOOKS)
