@@ -3,7 +3,7 @@ package dj.personal.website.book;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.enableLoggingOfRequestAndResponseIfValidationFails;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.webAppContextSetup;
-import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.is;
 
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
@@ -35,18 +35,14 @@ class BookControllerTest {
 
 	@Test
 	@WithMockUser(username = "admin", roles = { "website-admin" })
-	void givenRoleAdmin_findBooksReturnsBooksFromBookDataSqlFile() {
+	void givenRoleAdmin_findBooksReturnsAllBooksInJsonFormat() {
 		given()
 				.when()
 				.get(API_GET_BOOKS)
 				.then()
 				.assertThat().statusCode(HttpStatus.OK.value())
 				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("$", contains(
-				BookMatcher.matchesBook(BookDto.builder().isbn(1L).title("book1").authors("author1").yearRead(2020).build()),
-				BookMatcher.matchesBook(BookDto.builder().isbn(2L).title("book2").authors("author2").yearRead(2019).build()),
-				BookMatcher.matchesBook(BookDto.builder().isbn(3L).title("book3").authors("author3").yearRead(2018).build()))
-		);
+				.assertThat().body("size()", is(24));
 	}
 
 	@Test

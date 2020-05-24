@@ -6,9 +6,11 @@ import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
-@Builder()
+@Builder
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 class Book {

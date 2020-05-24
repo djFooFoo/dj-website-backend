@@ -1,30 +1,3 @@
-INSERT INTO book (isbn, title, authors, year_read)
-VALUES (9781491954164, 'Java 9 Modularity: Patterns and practices for developing maintainable applications', 'Sander Mak and Paul Baker', 2019),
-       (9781934356340, 'The Passionate Programmer: Creating a Remarkable Career in Software Development', 'Chad Fowler', 2019),
-       (9781118957400, 'Oracle Certified Associate Java SE 8 Programmer I Study Guide', 'Jeanne Boyarsky and Scott Selikoff', 2016),
-       (9781985170285, 'Ng-book: the complete book on Angular', 'Nathan Murray, Felipe Coury, Ari Lerner and Carlos Taborda', 2019),
-       (9781119067900, 'Oracle Certified Professional Java SE 8 Programmer II Study Guide', 'Jeanne Boyarsky and Scott Selikoff', 2019),
-       (9780137081073, 'The Clean Coder: A code of Conduct for Professional Programmers', 'Robert Cecil Martin', 2018),
-       (9780134685991, 'Effective Java: A Programming Language Guide', 'Joshua Bloch', 2019),
-       (9780132350884, 'Clean Code: A Handbook of Agile Software Craftsmanship', 'Robert Cecil Martin', 2019),
-       (9780596007126, 'Head First Design Patterns: A Brain-Friendly Guide', 'Elisabeth Freeman and Kathy Sierra', 2016),
-       (9781491925614, 'Fundamentals of Deep Learning', 'Nicholas Locascio and Nikhil Buduma', 2018),
-       (9780321579362, 'Succeeding with Agile: Software Development Using Scrum', 'Mike Cohn', 2017),
-       (9780982866917, 'The Elements of Scrum', 'Christopher A. Sims and Hillary Louise Johnson', 2016),
-       (9781511317290, '7 Habits of highly effective people', 'Stephen Covey', 2018),
-       (9780671027032, 'How to win friends and influence people', 'Dale Carnegie', 2018),
-       (9780143124047, 'How to create a mind: The Secret of Human Thought Revealed', 'Ray Kurzweil', 2018),
-       (9781449344856, 'AngularJS', 'Brad Green and Shyam Seshadri', 2017),
-       (9780980846904, 'HTML5 & CSS3 For The Real World', 'Alexis Goldstein, Estelle Weyl and Louis Lazaris', 2017),
-       (9781935182023, 'JUnit in Action', 'Ted Husted and Vincent Massol', 2016),
-       (9781783982509, 'Mastering Unit Testing Using Mockito, JUnit', 'Sujoy Acharya', 2016),
-       (9781617291203, 'Spring in Action', 'Craig Walls', 2017),
-       (9781617290459, 'Java Persistence with Hibernate', 'Cornelis Bauer and Gavin King', 2017),
-       (9780062803832, 'Unfu*k Yourself: Get Out of Your Head and Into Your Life', 'Bishop, Gary John', 2020),
-       (9780134052502, 'The Software Craftsman: Professionalism, Pragmatism, Pride', 'Sandro Mancuso and Robert Cecil Martin', 2020),
-       (9780321125217, 'Domain-Driven Design: Tackling Complexity in the Heart of Software', 'Eric Evans', 2020)
-       ;
-
 insert into translated_value (language, key, value)
 values ('nl', '7 Habits of highly effective people', 'De zeven eigenschappen van effectief leiderschap'),
        ('fr', '7 Habits of highly effective people', 'Les 7 habitudes de ceux qui réalisent tout ce qu''ils entreprennent'),
