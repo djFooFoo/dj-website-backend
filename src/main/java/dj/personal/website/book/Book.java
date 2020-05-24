@@ -1,5 +1,6 @@
 package dj.personal.website.book;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -17,6 +18,7 @@ class Book {
 	@Id
 	private Long isbn;
 
+	@Column(unique=true)
 	private String title;
 
 	private String authors;
