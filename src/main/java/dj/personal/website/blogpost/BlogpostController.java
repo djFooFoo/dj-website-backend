@@ -22,7 +22,7 @@ class BlogpostController {
 		this.blogpostRepository = blogpostRepository;
 	}
 
-	@GetMapping("api/blogpost")
+	@GetMapping("api/blogposts")
 	@RolesAllowed(Role.ADMIN)
 	public Collection<BlogpostDTO> findAll() {
 		return blogpostRepository.findAll()
