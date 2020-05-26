@@ -1,14 +1,25 @@
 package dj.personal.website.translation;
 
-import java.io.Serializable;
 import java.util.AbstractMap;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+/**
+ * @author dj
+ */
 @Entity
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+public
 class TranslatedValue {
 	@EmbeddedId
 	private LanguageKey languageKey;
@@ -18,17 +29,6 @@ class TranslatedValue {
 
 	AbstractMap.SimpleEntry<String, String> createKeyAndValuePair() {
 		return new AbstractMap.SimpleEntry<>(languageKey.getKey(), value);
-	}
-}
-
-@Embeddable
-class LanguageKey implements Serializable {
-	private String language;
-
-	private String key;
-
-	String getKey() {
-		return key;
 	}
 }
 

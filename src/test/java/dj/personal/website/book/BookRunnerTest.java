@@ -20,10 +20,10 @@ public class BookRunnerTest {
 
 	@Test
 	public void adds24BooksToRepository() {
-		int expectedAmountOfBooks = 24;
+		int amountOfBooks = 24;
 
 		bookRunner.run();
 
-		verify(bookRepository, times(expectedAmountOfBooks)).save(any(Book.class));
+		verify(bookRepository, times(amountOfBooks)).save(any(Book.class));
 	}
 }

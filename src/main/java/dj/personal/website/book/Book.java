@@ -6,6 +6,7 @@ import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -14,11 +15,12 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 class Book {
 	@Id
 	private Long isbn;
 
-	@Column(unique=true)
+	@Column(unique = true)
 	private String title;
 
 	private String authors;
