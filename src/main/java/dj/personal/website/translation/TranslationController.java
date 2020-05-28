@@ -22,7 +22,7 @@ class TranslationController {
 		this.translatedValueRepository = translatedValueRepository;
 	}
 
-	@GetMapping("api/translation")
+	@GetMapping("api/translations")
 	@RolesAllowed(Role.ADMIN)
 	public TranslationDTO findAll() {
 		Map<ApplicationLocale, Map<String, String>> translationsForEachLocale = Arrays.stream(ApplicationLocale.values())

@@ -21,7 +21,7 @@ class CertificateController {
 		this.certificateRepository = certificateRepository;
 	}
 
-	@GetMapping("api/certificate")
+	@GetMapping("api/certificates")
 	@RolesAllowed(Role.ADMIN)
 	public Collection<CertificateDTO> findAll() {
 		return certificateRepository.findAll()

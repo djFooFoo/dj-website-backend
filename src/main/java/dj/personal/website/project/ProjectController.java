@@ -22,7 +22,7 @@ class ProjectController {
 		this.projectRepository = projectRepository;
 	}
 
-	@GetMapping("api/project")
+	@GetMapping("api/projects")
 	@RolesAllowed(Role.ADMIN)
 	public Collection<ProjectDTO> findAll() {
 		return projectRepository.findAll()
