@@ -64,7 +64,7 @@ public class BookRunner implements CommandLineRunner {
 		createAndSaveBook(9781934356340L, "The Passionate Programmer: Creating a Remarkable Career in Software Development", "Chad Fowler", 2019);
 		createAndSaveBook(9781118957400L, "Oracle Certified Associate Java SE 8 Programmer I Study Guide", "Jeanne Boyarsky and Scott Selikoff", 2016);
 		createAndSaveBook(9781119067900L, "Oracle Certified Professional Java SE 8 Programmer II Study Guide", "Jeanne Boyarsky and Scott Selikoff", 2019);
-		createAndSaveBook(9781985170285L, "Ng-book: the complete book on Angular", "Nathan Murray, Felipe Coury, Ari Lerner and Carlos Taborda", 2019);
+		createAndSaveBook(9781546376231L, "Ng-book: the complete book on Angular", "Nathan Murray, Felipe Coury, Ari Lerner and Carlos Taborda", 2019);
 		createAndSaveBook(9780132542913L, "The Clean Coder: A code of Conduct for Professional Programmers", "Robert Cecil Martin", 2018);
 		createAndSaveBook(9780134685991L, "Effective Java: A Programming Language Guide", "Joshua Bloch", 2019);
 		createAndSaveBook(9780132350884L, "Clean Code: A Handbook of Agile Software Craftsmanship", "Robert Cecil Martin", 2019);
