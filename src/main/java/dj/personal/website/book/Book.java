@@ -3,6 +3,7 @@ package dj.personal.website.book;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,12 +28,16 @@ class Book {
 
 	private int yearRead;
 
+	@Lob
+	private String base64image;
+
 	BookDto toDTO() {
 		return BookDto.builder()
 				.isbn(isbn)
 				.title(title)
 				.authors(authors)
 				.yearRead(yearRead)
+				.base64image(base64image)
 				.build();
 	}
 }

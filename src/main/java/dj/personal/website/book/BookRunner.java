@@ -1,5 +1,14 @@
 package dj.personal.website.book;
 
+import static java.util.stream.Collectors.joining;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 
 import org.slf4j.Logger;
@@ -30,6 +39,27 @@ public class BookRunner implements CommandLineRunner {
 
 		int size = books.size();
 		logger.info("A total amount of " + size + " books has been saved to the database.");
+	}
+
+	private String retrieveBookCover(long isbn) {
+		try {
+			URL url = new URL("http://109.132.239.183:10000/book-cover/" + isbn);
+			HttpURLConnection con = (HttpURLConnection) url.openConnection();
+			con.setRequestMethod("GET");
+			System.out.println("spannend");
+			System.out.println(con.getResponseCode());
+			System.out.println(con.getResponseMessage());
+
+			InputStream inputStream = con.getInputStream();
+			String text = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))
+					.lines()
+					.collect(joining());
+			con.disconnect();
+			return text;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	private Collection<Book> createBooks() {
@@ -67,6 +97,7 @@ public class BookRunner implements CommandLineRunner {
 				.title(title)
 				.authors(authors)
 				.yearRead(yearRead)
+				.base64image(retrieveBookCover(isbn))
 				.build();
 		bookRepository.save(book);
 	}

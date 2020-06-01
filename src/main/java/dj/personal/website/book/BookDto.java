@@ -14,6 +14,7 @@ class BookDto {
 	private final String authors;
 	private final Integer yearRead;
 	private final String title;
+	private final String base64image;
 
 	@JsonPOJOBuilder(withPrefix = "")
 	public static class BookDtoBuilder {
