@@ -31,6 +31,8 @@ class Book {
 	@Lob
 	private String base64image;
 
+	private float rating;
+
 	BookDto toDTO() {
 		return BookDto.builder()
 				.isbn(isbn)
@@ -38,6 +40,7 @@ class Book {
 				.authors(authors)
 				.yearRead(yearRead)
 				.base64image(base64image)
+				.rating(rating)
 				.build();
 	}
 }
