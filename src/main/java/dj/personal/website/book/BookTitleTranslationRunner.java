@@ -87,8 +87,8 @@ public class BookTitleTranslationRunner implements CommandLineRunner {
 						"How to create a mind: Het geheim van de menselijke gedachte onthuld",
 						"How to create a mind: Le secret de la pensée humaine dévoilé");
 				addTranslationsForKey("HTML5 & CSS3 For The Real World",
-						"Hoe maak je een geest: Het geheim van de menselijke gedachte onthuld",
-						"Comment créer un esprit : Le secret de la pensée humaine dévoilé");
+						"HTML5 & CSS3 voor de Echte Wereld",
+						"HTML5 & CSS3 pour le Monde Réel");
 				addTranslationsForKey("AngularJS",
 						"AngularJS",
 						"AngularJS");
