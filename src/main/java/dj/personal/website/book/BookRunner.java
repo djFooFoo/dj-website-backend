@@ -46,9 +46,6 @@ public class BookRunner implements CommandLineRunner {
 			URL url = new URL("http://109.132.239.183:10000/book-cover/" + isbn);
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("GET");
-			System.out.println("spannend");
-			System.out.println(con.getResponseCode());
-			System.out.println(con.getResponseMessage());
 
 			InputStream inputStream = con.getInputStream();
 			String text = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))
