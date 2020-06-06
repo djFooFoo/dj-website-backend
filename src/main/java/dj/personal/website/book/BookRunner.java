@@ -1,36 +1,29 @@
 package dj.personal.website.book;
 
-import static java.util.stream.Collectors.joining;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author dj
  */
 @Order(1)
 @Component
+@Slf4j
 public class BookRunner implements CommandLineRunner {
-	private static final Logger logger = LoggerFactory.getLogger(BookRunner.class);
 
 	private final BookRepository bookRepository;
+	private final BookCoverService bookCoverService;
 
 	@Autowired
-	public BookRunner(BookRepository bookRepository) {
+	public BookRunner(BookRepository bookRepository, BookCoverService bookCoverService) {
 		this.bookRepository = bookRepository;
+		this.bookCoverService = bookCoverService;
 	}
 
 	@Override
@@ -38,25 +31,7 @@ public class BookRunner implements CommandLineRunner {
 		Collection<Book> books = createBooks();
 
 		int size = books.size();
-		logger.info("A total amount of " + size + " books has been saved to the database.");
-	}
-
-	private String retrieveBookCover(long isbn) {
-		try {
-			URL url = new URL("http://109.132.239.183:10000/book-cover/" + isbn);
-			HttpURLConnection con = (HttpURLConnection) url.openConnection();
-			con.setRequestMethod("GET");
-
-			InputStream inputStream = con.getInputStream();
-			String text = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8))
-					.lines()
-					.collect(joining());
-			con.disconnect();
-			return text;
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
+		log.info("A total amount of " + size + " books have been saved to the database.");
 	}
 
 	private Collection<Book> createBooks() {
@@ -94,7 +69,7 @@ public class BookRunner implements CommandLineRunner {
 				.title(title)
 				.authors(authors)
 				.yearRead(yearRead)
-				.base64image(retrieveBookCover(isbn))
+				.base64image(bookCoverService.get(isbn))
 				.rating(rating)
 				.build();
 		bookRepository.save(book);

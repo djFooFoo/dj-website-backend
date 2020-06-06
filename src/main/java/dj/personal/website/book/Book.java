@@ -31,7 +31,7 @@ class Book {
 	@Lob
 	private String base64image;
 
-	private float rating;
+	private Float rating;
 
 	BookDto toDTO() {
 		return BookDto.builder()
