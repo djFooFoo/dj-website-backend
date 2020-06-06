@@ -31,7 +31,7 @@ public class BookRunner implements CommandLineRunner {
 		Collection<Book> books = createBooks();
 
 		int size = books.size();
-		log.info("A total amount of " + size + " books have been saved to the database.");
+		log.info(size + " books have been saved to the database.");
 	}
 
 	private Collection<Book> createBooks() {
