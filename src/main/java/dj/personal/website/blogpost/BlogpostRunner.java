@@ -76,7 +76,7 @@ public class BlogpostRunner implements CommandLineRunner {
 		createAndSaveBlogpost("blogpost.title.14",  LocalDate.of(2020, Month.MARCH, 31),
 				"https://medium.com/better-programming/test-driven-development-attempt-with-jest-and-angular-7e064b76ca2d?source=friends_link&sk=02e853220ce751e054222a67377ac804", "Angular");
 
-		createAndSaveBlogpost("blogpost.title.15`",  LocalDate.of(2020, Month.APRIL, 20),
+		createAndSaveBlogpost("blogpost.title.15",  LocalDate.of(2020, Month.APRIL, 20),
 				"https://medium.com/better-programming/how-to-review-code-in-7-steps-98298003b7ec?source=friends_link&sk=648395f0913696002a267ee4f648a3c6", "Programming");
 
 		createAndSaveBlogpost("blogpost.title.16",  LocalDate.of(2020, Month.APRIL, 23),
