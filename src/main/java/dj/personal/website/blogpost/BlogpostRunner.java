@@ -94,6 +94,9 @@ public class BlogpostRunner implements CommandLineRunner {
 		createAndSaveBlogpost("blogpost.title.20",  LocalDate.of(2020, Month.JUNE, 10),
 				"https://medium.com/better-programming/how-to-create-an-angular-pipeline-with-jenkins-8040f1a0c0ee?source=friends_link&sk=1b5c4a7723fb46f94ded85eda2e8e2e0", "Angular");
 
+		createAndSaveBlogpost("blogpost.title.21", LocalDate.of(2020, Month.JUNE, 15),
+				"https://medium.com/better-programming/how-to-create-a-star-rating-component-in-angular-ff32234ea531?source=friends_link&sk=4b636bbb2898a171844386bbac08a65e", "Angular");
+
 		return blogpostRepository.findAll();
 	}
 

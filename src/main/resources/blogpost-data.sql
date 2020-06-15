@@ -82,3 +82,8 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.20', 'How to Create an Angular Pipeline With Jenkins: The step-by-step guide to better CI'),
        ('nl', 'blogpost.title.20', 'Hoe maak je een Angular Pipeline met Jenkins: De stap-voor-stap gids voor betere CI'),
        ('fr', 'blogpost.title.20', 'Comment créer un pipeline d''Angular avec Jenkins: Le guide étape par étape pour une meilleure IC');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.21', 'How to Create a Star Rating Component in Angular: Let your users leave reviews'),
+       ('nl', 'blogpost.title.21', 'Hoe maak je een Star Rating Component in Angular: Laat gebruikers beoordelingen achterlaten'),
+       ('fr', 'blogpost.title.21', 'Comment créer un élément de classement par étoiles avec Angular: Laissez vos utilisateurs laisser des commentaires');
