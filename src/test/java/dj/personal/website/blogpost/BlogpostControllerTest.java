@@ -37,7 +37,7 @@ class BlogpostControllerTest {
 				.then()
 				.assertThat().statusCode(HttpStatus.OK.value())
 				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("size()", is(20));
+				.assertThat().body("size()", is(21));
 	}
 
 	@Test
