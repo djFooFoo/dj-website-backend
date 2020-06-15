@@ -12,4 +12,5 @@ class BlogpostDTO {
 	private final String url;
 	private final String category;
 	private final String title;
+	private final String base64image;
 }

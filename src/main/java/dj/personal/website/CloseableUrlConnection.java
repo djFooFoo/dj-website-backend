@@ -1,4 +1,4 @@
-package dj.personal.website.book;
+package dj.personal.website;
 
 import java.io.Closeable;
 import java.io.IOException;

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import dj.personal.website.CloseableUrlConnection;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -32,6 +33,7 @@ public class BookCoverService {
 	}
 
 	public String get(long isbn) {
+		log.info("Retrieving book with isbn: " + isbn);
 		try {
 			String url = bookCoverUrl + isbn;
 			HttpURLConnection connection = closeableUrlConnection.connect(url);
