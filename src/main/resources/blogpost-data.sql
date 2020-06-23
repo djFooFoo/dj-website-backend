@@ -87,3 +87,8 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.21', 'How to Create a Star Rating Component in Angular: Let your users leave reviews'),
        ('nl', 'blogpost.title.21', 'Hoe maak je een Star Rating Component in Angular: Laat gebruikers beoordelingen achterlaten'),
        ('fr', 'blogpost.title.21', 'Comment créer un élément de classement par étoiles avec Angular: Laissez vos utilisateurs laisser des commentaires');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.22', 'How To Use Google Analytics in Angular? A Brain-Friendly Guide on How To Track User Behaviour'),
+       ('nl', 'blogpost.title.22', 'Hoe gebruik je Google Analytics in Angular? Een hersenvriendelijke gids voor het bijhouden van het gebruikersgedrag'),
+       ('fr', 'blogpost.title.22', 'Comment utiliser Google Analytics de manière angulaire ? Un guide pratique sur la façon de suivre le comportement des utilisateurs');
