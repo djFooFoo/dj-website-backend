@@ -98,7 +98,7 @@ public class BlogpostRunner implements CommandLineRunner {
 				"https://medium.com/better-programming/how-to-create-a-star-rating-component-in-angular-ff32234ea531?source=friends_link&sk=4b636bbb2898a171844386bbac08a65e", "Angular");
 
 		createAndSaveBlogpost("blogpost.title.22", LocalDate.of(2020, Month.JUNE, 23),
-				"https://medium.com/@dieterjordens/enable-angular-google-analytics-14acac59e998?source=friends_link&sk=c4d260fbdc705b9947c665b17a8e923e", "Angular");
+				"https://medium.com/swlh/enable-angular-google-analytics-14acac59e998?source=friends_link&sk=c4d260fbdc705b9947c665b17a8e923e", "Angular");
 
 		return blogpostRepository.findAll();
 	}
