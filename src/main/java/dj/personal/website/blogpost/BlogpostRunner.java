@@ -108,7 +108,7 @@ public class BlogpostRunner implements CommandLineRunner {
 				.title(title)
 				.publicationDate(publicationDate)
 				.url(url)
-				.base64image(blogpostPreviewService.get(url))
+				.base64image(blogpostPreviewService.get(title, url))
 				.category(category)
 				.build();
 		blogpostRepository.save(blogpost);

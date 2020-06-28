@@ -33,7 +33,7 @@ public class BlogpostPreviewService {
 		this.closeableUrlConnection = closeableUrlConnection;
 	}
 
-	public String get(String link) {
+	public String get(String title, String link) {
 		log.info("Retrieving blogpost with link: " + link);
 		try {
 			String url = blogpostDownloaderUrl;
@@ -45,7 +45,7 @@ public class BlogpostPreviewService {
 			connection.setDoOutput(true);
 			connection.setRequestMethod("POST");
 
-			String jsonInputString = "{\"url\": \"" + link + "\"}";
+			String jsonInputString = "{\n" + "\"title\": \"" + title + "\",\n" + "\"url\": \"" + link + "\"\n}";
 			try(OutputStream os = connection.getOutputStream()) {
 				byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
 				os.write(input, 0, input.length);
