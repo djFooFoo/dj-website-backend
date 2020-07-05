@@ -104,13 +104,17 @@ public class BlogpostRunner implements CommandLineRunner {
 	}
 
 	private void createAndSaveBlogpost(String title, LocalDate publicationDate, String url, String category) {
+		BlogpostPreview blogpostPreview = blogpostPreviewService.get(title, url);
+
 		Blogpost blogpost = Blogpost.builder()
 				.title(title)
 				.publicationDate(publicationDate)
 				.url(url)
-				.base64image(blogpostPreviewService.get(title, url))
+				.base64image(blogpostPreview.getImage())
+				.text(blogpostPreview.getText())
 				.category(category)
 				.build();
+
 		blogpostRepository.save(blogpost);
 	}
 }

@@ -33,7 +33,7 @@ public class BlogpostPreviewService {
 		this.closeableUrlConnection = closeableUrlConnection;
 	}
 
-	public String get(String title, String link) {
+	public BlogpostPreview get(String title, String link) {
 		log.info("Retrieving blogpost with link: " + link);
 		try {
 			String url = blogpostDownloaderUrl;
@@ -56,8 +56,9 @@ public class BlogpostPreviewService {
 					.collect(joining());
 
 			final JsonNode parent = new ObjectMapper().readTree(jsonString);
-
-			return parent.path("image").asText();
+			String image = parent.path("image").asText();
+			String text = parent.path("text").asText();
+			return new BlogpostPreview(image, text);
 
 		} catch (Exception e) {
 			log.error("Could not retrieve blogpost with link " + link + ".");
