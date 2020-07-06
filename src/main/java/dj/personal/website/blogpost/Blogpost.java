@@ -48,7 +48,6 @@ class Blogpost {
 				.url(url)
 				.category(category)
 				.base64image(base64image)
-				.text(text)
 				.build();
 	}
 }
