@@ -47,7 +47,7 @@ class Blogpost {
 				.publicationDate(publicationDate)
 				.url(url)
 				.category(category)
-				.base64image("data:image/png;base64, " + base64image)
+				.base64image("data:image/jpeg;base64, " + base64image)
 				.build();
 	}
 }
