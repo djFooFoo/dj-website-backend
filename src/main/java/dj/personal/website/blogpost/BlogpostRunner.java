@@ -111,7 +111,6 @@ public class BlogpostRunner implements CommandLineRunner {
 				.publicationDate(publicationDate)
 				.url(url)
 				.base64image(blogpostPreview.getImage())
-				.text(blogpostPreview.getText())
 				.category(category)
 				.build();
 
