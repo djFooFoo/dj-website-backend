@@ -3,6 +3,7 @@ package dj.personal.website.certificate;
 import static java.util.stream.Collectors.toList;
 
 import java.util.Collection;
+import java.util.Comparator;
 
 import javax.annotation.security.RolesAllowed;
 
@@ -27,6 +28,7 @@ class CertificateController {
 		return certificateRepository.findAll()
 				.stream()
 				.map(Certificate::toDTO)
+				.sorted(Comparator.comparing(CertificateDTO::getIssueDate).reversed().thenComparing(CertificateDTO::getName))
 				.collect(toList());
 	}
 }
