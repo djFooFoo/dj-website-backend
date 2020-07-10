@@ -20,6 +20,6 @@ values ('fr', 'deep.learning.specialization', 'Spécialisation de l''apprentissa
        ('nl', 'angular.challenge', 'Angular Challenge Finalist'),
        ('en', 'angular.challenge', 'Angular Challenge Finalist'),
        ('fr', 'pytorch.deep.learning', 'PyTorch: Deep Learning et Intelligence Artificielle'),
-       ('nl', 'pytorch.deep.learning', 'PyTorch: Deep Learning and Artificial Intelligence'),
-       ('en', 'pytorch.deep.learning', 'PyTorch: Deep Learning en Artificiële Intelligentie');
+       ('en', 'pytorch.deep.learning', 'PyTorch: Deep Learning and Artificial Intelligence'),
+       ('nl', 'pytorch.deep.learning', 'PyTorch: Deep Learning en Artificiële Intelligentie');
 
