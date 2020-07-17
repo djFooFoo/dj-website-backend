@@ -92,3 +92,8 @@ insert into translated_value (language, key, value)
 values ('en', 'blogpost.title.22', 'How To Use Google Analytics in Angular? A Brain-Friendly Guide on How To Track User Behaviour'),
        ('nl', 'blogpost.title.22', 'Hoe gebruik je Google Analytics in Angular? Een hersenvriendelijke gids voor het bijhouden van het gebruikersgedrag'),
        ('fr', 'blogpost.title.22', 'Comment utiliser Google Analytics de manière angulaire ? Un guide pratique sur la façon de suivre le comportement des utilisateurs');
+
+insert into translated_value (language, key, value)
+values ('en', 'blogpost.title.23', '5 Reasons to Become a Software Craftsman'),
+       ('nl', 'blogpost.title.23', '5 Redenen om een Software Craftsman te worden'),
+       ('fr', 'blogpost.title.23', '5 raisons de devenir un Software Craftsman');

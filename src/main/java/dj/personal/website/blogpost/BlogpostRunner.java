@@ -100,6 +100,9 @@ public class BlogpostRunner implements CommandLineRunner {
 		createAndSaveBlogpost("blogpost.title.22", LocalDate.of(2020, Month.JUNE, 23),
 				"https://medium.com/swlh/enable-angular-google-analytics-14acac59e998?source=friends_link&sk=c4d260fbdc705b9947c665b17a8e923e", "Angular");
 
+		createAndSaveBlogpost("blogpost.title.23", LocalDate.of(2020, Month.JULY, 16),
+				"https://medium.com/better-programming/5-reasons-to-become-a-software-craftsman-86ab3d7c4cf9?source=friends_link&sk=4a76d6d5579611ef10269af91348719f", "Programming");
+
 		return blogpostRepository.findAll();
 	}
 
