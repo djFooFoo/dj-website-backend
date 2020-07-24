@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Order(2)
+@Order(1)
 @Component
 @Slf4j
 public class CertificateRunner implements CommandLineRunner {
