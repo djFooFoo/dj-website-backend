@@ -1,14 +1,3 @@
-insert into certificate (name, issue_date, organization, credential_url, certificate_type)
-values ('Oracle Certified Professional: Java SE 11 Programmer', TO_DATE('12/2019', 'MM/YYYY'), 'Oracle', 'https://www.youracclaim.com/badges/6479b37c-a8aa-4412-adc4-f7ada40176a6/public_url', 1),
-       ('Oracle Certified Associate, Java SE 8 Programmer', TO_DATE('09/2016', 'MM/YYYY'), 'Oracle', 'https://www.youracclaim.com/badges/3ec8731f-0c1a-4075-bdf0-b6c8d5f0cbe3/public_url', 1),
-       ('Professional Scrum Developer I', TO_DATE('04/2017', 'MM/YYYY'), 'Scrum.org', 'https://www.scrum.org/user/243806', 1),
-       ('EXIN Agile Scrum Foundation', TO_DATE('09/2019', 'MM/YYYY'), 'Exin', 'https://exeed.pro/badge/43740', 1),
-       ('deep.learning.specialization', TO_DATE('05/2019', 'MM/YYYY'), 'Coursera', 'https://www.coursera.org/account/accomplishments/specialization/SXJNRZSW2FNQ', 0),
-       ('ai.for.everyone', TO_DATE('03/2019', 'MM/YYYY'), 'Coursera', 'https://www.coursera.org/account/accomplishments/verify/FL5WAVUSXLXE', 0),
-       ('angular.challenge',  TO_DATE('05/2019', 'MM/YYYY'), 'NG-BE, Google, Innovatus, Showpad, EDITx', 'https://photos.google.com/share/AF1QipMGr_Fnj3VeEW0UJ7GJ_71Imb5zBI6m8JhO99nQPDmf_5mOqX9EtOi4rlBuEtU18Q?key=QXplbTItTExCZGhrd0FCNGMzc3Jwd05EVTJRYVlB', 2),
-       ('pytorch.deep.learning', TO_DATE('05/2020', 'MM/YYYY'), 'Udemy', 'https://www.udemy.com/certificate/UC-ae1c4739-0ce8-4153-bc4d-9492d58aed8c/', 0)
-;
-
 insert into translated_value (language, key, value)
 values ('fr', 'deep.learning.specialization', 'Spécialisation de l''apprentissage profond'),
        ('nl', 'deep.learning.specialization', 'Deep Learning Specialisatie'),
