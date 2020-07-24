@@ -20,7 +20,7 @@ import dj.personal.website.translation.TranslatedValueRepository;
 /**
  * @author dj
  */
-@Order(3)
+@Order(1)
 @Component
 public class BookAuthorsTranslationRunner implements CommandLineRunner {
 	private final BookRepository bookRepository;

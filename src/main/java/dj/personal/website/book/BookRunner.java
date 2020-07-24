@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @author dj
  */
-@Order(1)
+@Order(2)
 @Component
 @Slf4j
 public class BookRunner implements CommandLineRunner {

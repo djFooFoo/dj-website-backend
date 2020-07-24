@@ -17,7 +17,7 @@ import dj.personal.website.translation.TranslatedValueRepository;
 /**
  * @author dj
  */
-@Order(2)
+@Order(1)
 @Component
 public class BlogpostTitleTranslationRunner implements CommandLineRunner {
 	private final TranslatedValueRepository translatedValueRepository;
