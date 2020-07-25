@@ -49,10 +49,10 @@ values ('Java 6', 2),
        ('Docker', 2);
 
 
-/*insert into technology (name, project_id)
+insert into technology (name, project_id)
 values ('Java 8', 3),
        ('Spring', 3),
-       ('Angular 8', 3),
+       ('Angular', 3),
        ('Jasmine', 3),
        ('CouchDB', 3),
        ('Elastic', 3),
@@ -70,7 +70,7 @@ values ('Java 8', 3),
        ('Typescript', 3),
        ('Swagger', 3),
        ('Cypress', 3),
-       ('Node', 3);*/
+       ('Node', 3);
 
 insert into translated_value (language, key, value)
 values ('fr', 'fod.justice', 'Service Public Fédéral Justice'),
@@ -78,9 +78,9 @@ values ('fr', 'fod.justice', 'Service Public Fédéral Justice'),
        ('en', 'fod.justice', 'Federal Public Service Justice');
 
 insert into translated_value (language, key, value)
-values ('nl', 'fod.justice.description', 'Uit respect voor de klant wordt over het huidige project nog niets beschreven op mijn website.'),
-       ('fr', 'fod.justice.description', 'Par respect pour le client, rien n''est décrit sur mon site web concernant le projet en cours.'),
-       ('en', 'fod.justice.description', 'Out of respect for the customer, nothing is described on my website about the current project.'),
+values ('nl', 'fod.justice.description', 'De ontwikkeling van een modern document management systeem. De hoofdfunctionaliteiten van deze service zijn het toelaten van het opslaan van eender welk type document, het annoteren/taggen van documenten, het plaatsen van reacties, het leggen van associaties en het geavanceerd zoeken op documenten, tags etc.'),
+       ('fr', 'fod.justice.description', 'L''élaboration d''un système moderne de gestion des documents. Les principales fonctionnalités de ce service sont de permettre le stockage de tout type de document, l''annotation/étiquetage de documents, le placement des réponses, la création d''associations et la recherche avancée sur les documents, tags, etc.'),
+       ('en', 'fod.justice.description', 'The development of a modern document management system. The main functionalities of this service are to allow the storage of any type of document, the annotation/tagging of documents, the placement of comments, the creation of associations and the advanced search on documents, tags, etc.'),
        ('nl', 'ravago.description',
         'Het ontwikkelen van een custom ERP tool die door alle bedrijven binnen de wereldwijde <a href="https://www.ravago.com/">Ravago</a> company group gebruikt wordt. De belangrijkste functies van dit systeem zijn het plaatsen van orders, het regelen van transport en het aanmaken van invoices. De grootste uitdaging vond ik hier in het refactoren van vaak oude code naar een performante nieuwe architectuur. Om de nieuwe ontwikkelingen te ondersteunen werd er naast de applicatie een end-to-end framework gebouwd. Naast mijn functies als agile developer voerde ik deploys uit naar UAT en hielp ik met de release coördinatie. Daarnaast was ik gedurende een periode plaatsvervangend scrum master.'),
        ('fr', 'ravago.description',
@@ -114,7 +114,3 @@ insert into translated_value (language, key, value)
 values ('nl', 'bose.time.span', 'Oktober 2016 - Maart 2017'),
        ('en', 'bose.time.span', 'October 2016 - March 2017'),
        ('fr', 'bose.time.span', 'Octobre 2016 - Mars 2017');
-
-/*       ('nl', 'fod.justice.description', 'De ontwikkeling van een modern document management systeem dat binnen FOD justitie in gebruik genomen gaat worden. De hoofdfunctionaliteiten van deze service zijn het toelaten van het opslaan van eender welk type document, het annoteren/taggen van documenten, het plaatsen van reacties, het leggen van associaties en het geavanceerd zoeken op documenten, tags etc.'),
-       ('fr', 'fod.justice.description', 'L''élaboration d''un système moderne de gestion des documents qui sera mis en œuvre au sein du SFP Justice. Les principales fonctionnalités de ce service sont de permettre le stockage de tout type de document, l''annotation/étiquetage de documents, le placement des réponses, la création d''associations et la recherche avancée sur les documents, tags, etc.'),
-       ('en', 'fod.justice.description', 'The development of a modern document management system that will be put into use within the FPS Justice. The main functionalities of this service are to allow the storage of any type of document, the annotation/tagging of documents, the placement of comments, the creation of associations and the advanced search on documents, tags, etc.')*/
