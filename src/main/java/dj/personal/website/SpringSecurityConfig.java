@@ -1,4 +1,4 @@
-package dj.personal.website.config;
+package dj.personal.website;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,7 +14,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import dj.personal.website.Role;
 import io.micrometer.core.instrument.util.StringUtils;
 
 @Configuration

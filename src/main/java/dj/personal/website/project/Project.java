@@ -14,7 +14,18 @@ import javax.persistence.OneToMany;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 @Entity
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
 class Project implements Comparable<Project> {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

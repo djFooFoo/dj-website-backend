@@ -19,11 +19,11 @@ import dj.personal.website.translation.TranslatedValueRepository;
  */
 @Order(1)
 @Component
-public class CertificateNameTranslationRunner implements CommandLineRunner {
+public class CertificateTranslationRunner implements CommandLineRunner {
 	private final TranslatedValueRepository translatedValueRepository;
 
 	@Autowired
-	public CertificateNameTranslationRunner(TranslatedValueRepository translatedValueRepository) {
+	public CertificateTranslationRunner(TranslatedValueRepository translatedValueRepository) {
 		this.translatedValueRepository = translatedValueRepository;
 	}
 
