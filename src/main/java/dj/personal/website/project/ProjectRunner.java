@@ -40,39 +40,28 @@ public class ProjectRunner implements CommandLineRunner {
 	}
 
 	private Collection<Project> createProjects() {
-		Set<String> boseTechnologyNames = Stream
-				.of(
-						"Java 8", "Javascript", "SCSS", "Groovy", "Html5",
-						"AEM", "Bamboo", "Mockito", "PowerMock", "Hybris",
-						"Spring", "Intellij", "Scrum/Agile", "jQuery"
-				)
-				.collect(toSet());
-		createAndSaveProject("fa-headphones", "Bose", "Java Developer", "bose.description", "bose.time.span", boseTechnologyNames);
+		Project boseProject = createAndSaveProject("fa-headphones", "Bose", "Java Developer", "bose.description", "bose.time.span");
 
-		Set<String> ravagoTechnologyNames = Stream
-				.of(
-						"Java 6", "Spring", "Selenium", "JBoss", "Mockito",
-						"SQL", "Intellij", "Confluence", "Jira", "Git", "Bamboo",
-						"JSP", "Scrum/Agile", "Jenkins", "Docker", "Perl"
-				)
-				.collect(toSet());
-		createAndSaveProject("fa-tree", "Ravago", "Java Developer", "ravago.description", "ravago.time.span", ravagoTechnologyNames);
+		createAndSaveTechnologies(asSet("Java 8", "Javascript", "SCSS", "Groovy", "Html5", "AEM", "Bamboo", "Mockito", "PowerMock", "Hybris", "Spring", "Intellij", "Scrum/Agile", "jQuery"),
+				boseProject);
 
-		Set<String> fodTechnologyNames = Stream
-				.of(
-						"Java 8", "Spring", "Angular", "Jasmine", "CouchDB",
-						"ElasticSearch", "Mockito", "JUnit", "Nginx",
-						"REST Assured", "AssertJ", "Intellij", "Jira", "Git",
-						"Scrum/Agile", "Keycloak", "Docker", "TypeScript", "Swagger",
-						"Cypress", "Node", "SCSS"
-				)
-				.collect(toSet());
-		createAndSaveProject("fa-file", "fod.justice", "Full-Stack Developer", "fod.justice.description", "fod.justice.time.span", fodTechnologyNames);
+		Project ravagoProject = createAndSaveProject("fa-tree", "Ravago", "Java Developer", "ravago.description", "ravago.time.span");
+		createAndSaveTechnologies(
+				asSet("Java 6", "Spring", "Selenium", "JBoss", "Mockito", "SQL", "Intellij", "Confluence", "Jira", "Git", "Bamboo", "JSP", "Scrum/Agile", "Jenkins", "Docker", "Perl"), ravagoProject);
+
+		Project fodJusticeProject = createAndSaveProject("fa-file", "fod.justice", "Full-Stack Developer", "fod.justice.description", "fod.justice.time.span");
+		createAndSaveTechnologies(
+				asSet("Java 8", "Spring", "Angular", "Jasmine", "CouchDB", "ElasticSearch", "Mockito", "JUnit", "Nginx", "REST Assured", "AssertJ", "Intellij", "Jira", "Git", "Scrum/Agile",
+						"Keycloak", "Docker", "TypeScript", "Swagger", "Cypress", "Node", "SCSS"), fodJusticeProject);
 
 		return projectRepository.findAll();
 	}
 
-	private void createAndSaveProject(String icon, String client, String jobTitle, String jobDescription, String timeSpan, Set<String> technologyNames) {
+	private Set<String> asSet(String... arguments) {
+		return Stream.of(arguments).collect(toSet());
+	}
+
+	private Project createAndSaveProject(String icon, String client, String jobTitle, String jobDescription, String timeSpan) {
 		Project project = Project.builder()
 				.icon(icon)
 				.client(client)
@@ -81,8 +70,10 @@ public class ProjectRunner implements CommandLineRunner {
 				.timeSpan(timeSpan)
 				.build();
 
-		Project savedProject = projectRepository.save(project);
+		return projectRepository.save(project);
+	}
 
+	private void createAndSaveTechnologies(Set<String> technologyNames, Project savedProject) {
 		Set<Technology> technologies = technologyNames.stream()
 				.map(name -> Technology.builder().name(name).project(savedProject).build())
 				.collect(toSet());

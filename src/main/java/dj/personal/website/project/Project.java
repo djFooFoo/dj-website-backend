@@ -4,7 +4,6 @@ import static java.util.stream.Collectors.toSet;
 
 import java.util.Set;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -34,8 +33,6 @@ class Project implements Comparable<Project> {
 	private String icon;
 	private String client;
 	private String jobTitle;
-
-	@Column(columnDefinition = "TEXT")
 	private String jobDescription;
 	private String timeSpan;
 
