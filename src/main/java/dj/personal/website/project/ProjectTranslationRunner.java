@@ -36,9 +36,9 @@ public class ProjectTranslationRunner implements CommandLineRunner {
 	}
 
 	private void translateTimestamps() {
-		addTranslationsForKey("fod.justice.time.span", "September 2018 - present", "September 2018 - heden", "Septembre 2018 à ce jour");
-		addTranslationsForKey("ravago.time.span", "May 2017 - August 2018", "Mei 2017 - Augustus 2018", "Mai 2017 - Août 2018");
 		addTranslationsForKey("bose.time.span", "October 2016 - March 2017", "Oktober 2016 - Maart 2017", "Octobre 2016 - Mars 2017");
+		addTranslationsForKey("ravago.time.span", "May 2017 - August 2018", "Mei 2017 - Augustus 2018", "Mai 2017 - Août 2018");
+		addTranslationsForKey("fod.justice.time.span", "September 2018 - present", "September 2018 - heden", "Septembre 2018 à ce jour");
 	}
 
 	private void translateJobTitles() {

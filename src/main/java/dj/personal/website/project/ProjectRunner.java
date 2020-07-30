@@ -33,25 +33,21 @@ public class ProjectRunner implements CommandLineRunner {
 	public void run(String... args) {
 		Collection<Project> projects = createProjects();
 
-		int size = projects.size();
-		log.info(size + " projects have been saved to the database.");
+		log.info(projects.size() + " projects have been saved to the database.");
 
 		Collection<Technology> technologies = technologyRepository.findAll();
-		size = technologies.size();
-		log.info(size + " technologies have been saved to the database.");
+		log.info(technologies.size() + " technologies have been saved to the database.");
 	}
 
 	private Collection<Project> createProjects() {
-		Set<String> fodTechnologyNames = Stream
+		Set<String> boseTechnologyNames = Stream
 				.of(
-						"Java 8", "Spring", "Angular", "Jasmine", "CouchDB",
-						"ElasticSearch", "Mockito", "JUnit", "Nginx",
-						"REST Assured", "AssertJ", "Intellij", "Jira", "Git",
-						"Scrum/Agile", "Keycloak", "Docker", "TypeScript", "Swagger",
-						"Cypress", "Node", "SCSS"
+						"Java 8", "Javascript", "SCSS", "Groovy", "Html5",
+						"AEM", "Bamboo", "Mockito", "PowerMock", "Hybris",
+						"Spring", "Intellij", "Scrum/Agile", "jQuery"
 				)
 				.collect(toSet());
-		createAndSaveProject("fa-file", "fod.justice", "Full-Stack Developer", "fod.justice.description", "fod.justice.time.span", fodTechnologyNames);
+		createAndSaveProject("fa-headphones", "Bose", "Java Developer", "bose.description", "bose.time.span", boseTechnologyNames);
 
 		Set<String> ravagoTechnologyNames = Stream
 				.of(
@@ -62,14 +58,16 @@ public class ProjectRunner implements CommandLineRunner {
 				.collect(toSet());
 		createAndSaveProject("fa-tree", "Ravago", "Java Developer", "ravago.description", "ravago.time.span", ravagoTechnologyNames);
 
-		Set<String> boseTechnologyNames = Stream
+		Set<String> fodTechnologyNames = Stream
 				.of(
-						"Java 8", "Javascript", "SCSS", "Groovy", "Html5",
-						"AEM", "Bamboo", "Mockito", "PowerMock", "Hybris",
-						"Spring", "Intellij", "Scrum/Agile", "jQuery"
+						"Java 8", "Spring", "Angular", "Jasmine", "CouchDB",
+						"ElasticSearch", "Mockito", "JUnit", "Nginx",
+						"REST Assured", "AssertJ", "Intellij", "Jira", "Git",
+						"Scrum/Agile", "Keycloak", "Docker", "TypeScript", "Swagger",
+						"Cypress", "Node", "SCSS"
 				)
 				.collect(toSet());
-		createAndSaveProject("fa-headphones", "Bose", "Java Developer", "bose.description", "bose.time.span", boseTechnologyNames);
+		createAndSaveProject("fa-file", "fod.justice", "Full-Stack Developer", "fod.justice.description", "fod.justice.time.span", fodTechnologyNames);
 
 		return projectRepository.findAll();
 	}
