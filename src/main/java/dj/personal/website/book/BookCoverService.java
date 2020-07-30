@@ -1,17 +1,16 @@
 package dj.personal.website.book;
 
-import static java.util.stream.Collectors.joining;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.nio.charset.StandardCharsets;
+import java.net.URI;
+import java.net.http.HttpRequest;
+import java.util.concurrent.CompletableFuture;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 
-import dj.personal.website.CloseableUrlConnection;
+import dj.personal.website.HttpClientComponent;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -22,31 +21,21 @@ import lombok.extern.slf4j.Slf4j;
 public class BookCoverService {
 
 	private final String bookCoverUrl;
-	private final int timeout;
-	private final CloseableUrlConnection closeableUrlConnection;
+	private final HttpClientComponent httpClientComponent;
 
 	@Autowired
-	public BookCoverService(@Value("${book.cover.url}") String bookCoverUrl, @Value("${book.cover.timeout}") int timeout, CloseableUrlConnection closeableUrlConnection){
+	public BookCoverService(@Value("${book.cover.url}") String bookCoverUrl, HttpClientComponent httpClientComponent) {
 		this.bookCoverUrl = bookCoverUrl;
-		this.timeout = timeout;
-		this.closeableUrlConnection = closeableUrlConnection;
+		this.httpClientComponent = httpClientComponent;
 	}
 
-	public String get(long isbn) {
+	public CompletableFuture<String> get(long isbn) {
 		log.info("Retrieving book with isbn: " + isbn);
-		try {
-			String url = bookCoverUrl + isbn;
-			HttpURLConnection connection = closeableUrlConnection.connect(url);
-			connection.setConnectTimeout(timeout);
-			connection.setReadTimeout(timeout);
-			connection.setRequestMethod("GET");
+		HttpRequest request = HttpRequest.newBuilder(URI.create(bookCoverUrl + isbn))
+				.GET()
+				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+				.build();
 
-			return new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8))
-					.lines()
-					.collect(joining());
-		} catch (Exception e) {
-			log.error("Could not retrieve book cover with isbn " + isbn + ".");
-		}
-		return null;
+		return httpClientComponent.performAsync(request);
 	}
 }

@@ -5,6 +5,8 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.util.concurrent.CompletableFuture;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,7 +26,9 @@ public class BookRunnerTest {
 
 	@Test
 	public void adds24BooksToRepository() {
-		when(bookCoverService.get(any(Long.class))).thenReturn("a book cover");
+		CompletableFuture<String> completableFuture = new CompletableFuture<>();
+		completableFuture.complete("result");
+		when(bookCoverService.get(any(Long.class))).thenReturn(completableFuture);
 		int amountOfBooks = 24;
 
 		bookRunner.run();
