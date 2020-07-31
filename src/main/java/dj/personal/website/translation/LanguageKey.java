@@ -19,8 +19,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public
-class LanguageKey implements Serializable {
+public class LanguageKey implements Serializable {
 	private String language;
 	private String key;
 }

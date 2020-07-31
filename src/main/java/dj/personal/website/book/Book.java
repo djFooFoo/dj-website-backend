@@ -3,7 +3,10 @@ package dj.personal.website.book;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,12 +27,13 @@ class Book {
 	@Column(unique = true)
 	private String title;
 
+	@OneToOne(mappedBy = "book")
+	@Fetch(FetchMode.JOIN)
+	private BookCover bookCover;
+
 	private String authors;
 
 	private int yearRead;
-
-	@Lob
-	private String base64image;
 
 	private Float rating;
 
@@ -39,7 +43,6 @@ class Book {
 				.title(title)
 				.authors(authors)
 				.yearRead(yearRead)
-				.base64image(base64image)
 				.rating(rating)
 				.build();
 	}

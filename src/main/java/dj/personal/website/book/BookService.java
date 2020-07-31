@@ -14,16 +14,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService {
 	private final BookRepository bookRepository;
+	private final BookCoverRepository bookCoverRepository;
 
 	@Autowired
-	public BookService(BookRepository bookRepository) {
+	public BookService(BookRepository bookRepository, BookCoverRepository bookCoverRepository) {
 		this.bookRepository = bookRepository;
+		this.bookCoverRepository = bookCoverRepository;
 	}
 
 	public Collection<BookDto> getBooks() {
 		return bookRepository.findAll()
 				.stream()
-				.map(Book::toDTO)
+				.map(book -> {
+					BookDto bookDto = book.toDTO();
+					bookDto.setBase64image(bookCoverRepository.findByBook(book).get().getBase64image());
+					return bookDto;
+				})
 				.sorted(Comparator.comparing(BookDto::getYearRead).reversed().thenComparing(BookDto::getTitle))
 				.collect(toList());
 	}
