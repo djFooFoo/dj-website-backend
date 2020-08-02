@@ -104,6 +104,9 @@ public class BookTitleTranslationRunner implements CommandLineRunner {
 				addTranslationsForKey("Java Persistence with Hibernate",
 						"Java Persistentie met Hibernate",
 						"Java Persistance avec Hibernate");
+				addTranslationsForKey("Working Effectively with Legacy Code",
+						"Effectief Werken met Legacy Code",
+						"Travailler Efficacement avec l'Ancien Code");
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {

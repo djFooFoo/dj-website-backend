@@ -236,10 +236,18 @@ public class BookRunner implements CommandLineRunner {
 				.rating(3f)
 				.build());
 
+		books.add(Book.builder()
+				.isbn(9780131177055L)
+				.title("Working Effectively with Legacy Code")
+				.authors("Michael C. Feathers and Robert C. Martin")
+				.yearRead(2020)
+				.rating(3.5f)
+				.build());
+
 		return bookRepository.saveAll(books);
 	}
 
-	private Collection<BookCover> createBookCovers(Collection<Book> books){
+	private Collection<BookCover> createBookCovers(Collection<Book> books) {
 		List<BookCover> bookCovers = books.parallelStream()
 				.map(book -> BookCover.builder()
 						.book(book)
