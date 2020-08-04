@@ -239,7 +239,15 @@ public class BookRunner implements CommandLineRunner {
 		books.add(Book.builder()
 				.isbn(9780131177055L)
 				.title("Working Effectively with Legacy Code")
-				.authors("Michael C. Feathers and Robert C. Martin")
+				.authors("Michael C. Feathers")
+				.yearRead(2020)
+				.rating(3.5f)
+				.build());
+
+		books.add(Book.builder()
+				.isbn(9780134494166L)
+				.title("Clean Architecture: A Craftsman's Guide to Software Structure and Design")
+				.authors("Robert C. Martin")
 				.yearRead(2020)
 				.rating(3.5f)
 				.build());

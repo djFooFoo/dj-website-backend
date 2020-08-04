@@ -107,6 +107,9 @@ public class BookTitleTranslationRunner implements CommandLineRunner {
 				addTranslationsForKey("Working Effectively with Legacy Code",
 						"Effectief Werken met Legacy Code",
 						"Travailler Efficacement avec l'Ancien Code");
+				addTranslationsForKey("Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+						"Clean Architecture: Een Vakmansgids voor Softwarestructuur en -Ontwerp",
+						"Clean Architecture: Guide de l'artisan pour la structure et la conception de logiciels");
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {
