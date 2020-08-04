@@ -87,7 +87,7 @@ public class BookRunner implements CommandLineRunner {
 		books.add(Book.builder()
 				.isbn(9780132542913L)
 				.title("The Clean Coder: A code of Conduct for Professional Programmers")
-				.authors("Robert Cecil Martin")
+				.authors("Robert C. Martin")
 				.yearRead(2018)
 				.rating(4.5f)
 				.build());
@@ -103,7 +103,7 @@ public class BookRunner implements CommandLineRunner {
 		books.add(Book.builder()
 				.isbn(9780132350884L)
 				.title("Clean Code: A Handbook of Agile Software Craftsmanship")
-				.authors("Robert Cecil Martin")
+				.authors("Robert C. Martin")
 				.yearRead(2019)
 				.rating(4f)
 				.build());
@@ -143,7 +143,7 @@ public class BookRunner implements CommandLineRunner {
 		books.add(Book.builder()
 				.isbn(9780134052502L)
 				.title("The Software Craftsman: Professionalism, Pragmatism, Pride")
-				.authors("Sandro Mancuso and Robert Cecil Martin")
+				.authors("Sandro Mancuso")
 				.yearRead(2020)
 				.rating(4.5f)
 				.build());
