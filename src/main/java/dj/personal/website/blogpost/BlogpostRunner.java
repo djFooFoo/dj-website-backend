@@ -117,6 +117,9 @@ public class BlogpostRunner implements CommandLineRunner {
 		completableFutures.add(createBlogpost("blogpost.title.24", LocalDate.of(2020, Month.AUGUST, 17),
 				"https://medium.com/better-programming/3-reasons-to-switch-to-fastapi-f9c788d017e5?source=friends_link&sk=746e465da51bc0af4a94fc337689a2ff", "Python"));
 
+		completableFutures.add(createBlogpost("blogpost.title.25", LocalDate.of(2020, Month.SEPTEMBER, 8),
+				"https://medium.com/better-programming/how-to-create-a-dockerfile-for-a-spring-boot-application-46878997382f?source=friends_link&sk=d7f93632a36b031d97998d15f0225b75", "Java"));
+
 		List<Blogpost> blogposts = completableFutures
 				.parallelStream()
 				.map(CompletableFuture::join)
