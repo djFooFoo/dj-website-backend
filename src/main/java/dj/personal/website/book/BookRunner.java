@@ -85,7 +85,7 @@ public class BookRunner implements CommandLineRunner {
 				.build());
 
 		books.add(Book.builder()
-				.isbn(9780132542913L)
+				.isbn(9780137081073L)
 				.title("The Clean Coder: A code of Conduct for Professional Programmers")
 				.authors("Robert C. Martin")
 				.yearRead(2018)
@@ -213,7 +213,7 @@ public class BookRunner implements CommandLineRunner {
 				.build());
 
 		books.add(Book.builder()
-				.isbn(9781783982516L)
+				.isbn(9781783982509L)
 				.title("Mastering Unit Testing Using Mockito, JUnit")
 				.authors("Sujoy Acharya")
 				.yearRead(2016)
