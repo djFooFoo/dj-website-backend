@@ -38,9 +38,6 @@ class Blogpost {
 	@Lob
 	private String base64image;
 
-	@Lob
-	private String text;
-
 	BlogpostDTO toDTO() {
 		return BlogpostDTO.builder()
 				.title(title)

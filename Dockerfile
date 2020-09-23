@@ -4,7 +4,7 @@ RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 WORKDIR /home/spring
 
-COPY target/*.jar application.jar
+COPY /target/*.jar application.jar
 
 EXPOSE 8080
 

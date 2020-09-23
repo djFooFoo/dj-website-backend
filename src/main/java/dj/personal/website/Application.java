@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author dj
  */
 @SpringBootApplication
-public class WebsiteApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebsiteApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }

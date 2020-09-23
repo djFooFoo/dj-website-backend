@@ -13,10 +13,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.web.context.WebApplicationContext;
 
-import dj.personal.website.WebsiteApplication;
+import dj.personal.website.Application;
 import io.restassured.http.ContentType;
 
-@SpringBootTest(classes = WebsiteApplication.class)
+@SpringBootTest(classes = Application.class)
 class ProjectControllerTest {
 	private static final String API_GET_PROJECTS = "/api/projects";
 

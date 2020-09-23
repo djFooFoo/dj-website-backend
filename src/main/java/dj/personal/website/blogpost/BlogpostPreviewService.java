@@ -54,8 +54,7 @@ public class BlogpostPreviewService {
 				.thenApply(this::toJsonNode)
 				.thenApply(jsonNode -> {
 					String image = jsonNode.path("image").asText();
-					String text = jsonNode.path("text").asText();
-					return new BlogpostPreview(image, text);
+					return new BlogpostPreview(image);
 				});
 		}
 

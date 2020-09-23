@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WebsiteApplicationTest {
+class ApplicationTest {
 	@Test
 	public void applicationContextTest() {
-		WebsiteApplication.main(new String[] {});
+		Application.main(new String[] {});
 	}
 }

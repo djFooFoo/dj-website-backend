@@ -10,5 +10,4 @@ import lombok.Getter;
 @AllArgsConstructor
 public class BlogpostPreview {
 	private final String image;
-	private final String text;
 }
