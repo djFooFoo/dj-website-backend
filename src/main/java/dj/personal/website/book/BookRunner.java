@@ -22,23 +22,16 @@ import lombok.extern.slf4j.Slf4j;
 public class BookRunner implements CommandLineRunner {
 
 	private final BookRepository bookRepository;
-	private final BookCoverRepository bookCoverRepository;
-	private final BookCoverService bookCoverService;
 
 	@Autowired
-	public BookRunner(BookRepository bookRepository, BookCoverRepository bookCoverRepository, BookCoverService bookCoverService) {
+	public BookRunner(BookRepository bookRepository) {
 		this.bookRepository = bookRepository;
-		this.bookCoverRepository = bookCoverRepository;
-		this.bookCoverService = bookCoverService;
 	}
 
 	@Override
 	public void run(String... args) {
 		Collection<Book> books = createBooks();
 		log.info(books.size() + " books have been saved to the database.");
-
-		Collection<BookCover> bookCovers = createBookCovers(books);
-		log.info(bookCovers.size() + " book covers have been saved to the database.");
 	}
 
 	private Collection<Book> createBooks() {
@@ -253,16 +246,5 @@ public class BookRunner implements CommandLineRunner {
 				.build());
 
 		return bookRepository.saveAll(books);
-	}
-
-	private Collection<BookCover> createBookCovers(Collection<Book> books) {
-		List<BookCover> bookCovers = books.parallelStream()
-				.map(book -> BookCover.builder()
-						.book(book)
-						.base64image(bookCoverService.get(book.getIsbn()).join())
-						.build()
-				)
-				.collect(toList());
-		return bookCoverRepository.saveAll(bookCovers);
 	}
 }

@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>14</java.version>
+		<rest.assured.version>4.2.0</rest.assured.version>
 	</properties>
 
 	<dependencies>
@@ -80,7 +81,13 @@
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>spring-mock-mvc</artifactId>
-			<version>4.3.1</version>
+			<version>${rest.assured.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured-all</artifactId>
+			<version>${rest.assured.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

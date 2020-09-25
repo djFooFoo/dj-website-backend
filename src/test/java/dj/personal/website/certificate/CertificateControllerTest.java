@@ -1,7 +1,7 @@
 package dj.personal.website.certificate;
 
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.enableLoggingOfRequestAndResponseIfValidationFails;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
+
+import static io.restassured.RestAssured.given;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.webAppContextSetup;
 import static org.hamcrest.Matchers.is;
 
@@ -25,7 +25,6 @@ class CertificateControllerTest {
 	@BeforeEach
 	public void setUpRestAssured() {
 		webAppContextSetup(webApplicationContext);
-		enableLoggingOfRequestAndResponseIfValidationFails();
 	}
 
 	@Test
@@ -33,11 +32,12 @@ class CertificateControllerTest {
 	void givenRoleAdmin_findCertificatesReturnsAllCertificatesInJsonFormat() {
 		given()
 				.when()
+				.auth().basic("admin", "EenEenvoudigWachtwoord")
 				.get(API_GET_CERTIFICATES)
 				.then()
-				.assertThat().statusCode(HttpStatus.OK.value())
-				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("size()", is(0));
+				.statusCode(HttpStatus.OK.value())
+				.contentType(ContentType.JSON)
+				.body("size()", is(8));
 	}
 
 	@Test
@@ -46,6 +46,6 @@ class CertificateControllerTest {
 				.when()
 				.get(API_GET_CERTIFICATES)
 				.then()
-				.assertThat().statusCode(HttpStatus.UNAUTHORIZED.value());
+				.statusCode(HttpStatus.UNAUTHORIZED.value());
 	}
 }

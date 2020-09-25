@@ -27,10 +27,6 @@ class Book {
 	@Column(unique = true)
 	private String title;
 
-	@OneToOne(mappedBy = "book")
-	@Fetch(FetchMode.JOIN)
-	private BookCover bookCover;
-
 	private String authors;
 
 	private int yearRead;

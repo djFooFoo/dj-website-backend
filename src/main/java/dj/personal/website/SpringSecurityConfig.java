@@ -28,7 +28,7 @@ class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
 				.withUser("admin")
-				.password("{noop}wachtwoordVoorBoeken")
+				.password("{noop}EenEenvoudigWachtwoord")
 				.roles(Role.ADMIN);
 	}
 

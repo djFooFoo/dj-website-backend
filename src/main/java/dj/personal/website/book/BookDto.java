@@ -10,6 +10,5 @@ class BookDto {
 	private final String authors;
 	private final Integer yearRead;
 	private final String title;
-	private String base64image;
 	private final Float rating;
 }

@@ -1,7 +1,7 @@
 package dj.personal.website.project;
 
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.enableLoggingOfRequestAndResponseIfValidationFails;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
+
+import static io.restassured.RestAssured.given;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.webAppContextSetup;
 import static org.hamcrest.Matchers.is;
 
@@ -26,7 +26,6 @@ class ProjectControllerTest {
 	@BeforeEach
 	public void setUpRestAssured() {
 		webAppContextSetup(webApplicationContext);
-		enableLoggingOfRequestAndResponseIfValidationFails();
 	}
 
 	@Test
@@ -34,11 +33,12 @@ class ProjectControllerTest {
 	void givenRoleAdmin_findProjectsReturnsAllProjectsInJsonFormat() {
 		given()
 				.when()
+				.auth().basic("admin", "EenEenvoudigWachtwoord")
 				.get(API_GET_PROJECTS)
 				.then()
-				.assertThat().statusCode(HttpStatus.OK.value())
-				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("size()", is(0));
+				.statusCode(HttpStatus.OK.value())
+				.contentType(ContentType.JSON)
+				.body("size()", is(3));
 	}
 
 	@Test
@@ -47,6 +47,6 @@ class ProjectControllerTest {
 				.when()
 				.get(API_GET_PROJECTS)
 				.then()
-				.assertThat().statusCode(HttpStatus.UNAUTHORIZED.value());
+				.statusCode(HttpStatus.UNAUTHORIZED.value());
 	}
 }

@@ -35,16 +35,12 @@ class Blogpost {
 
 	private String category;
 
-	@Lob
-	private String base64image;
-
 	BlogpostDTO toDTO() {
 		return BlogpostDTO.builder()
 				.title(title)
 				.publicationDate(publicationDate)
 				.url(url)
 				.category(category)
-				.base64image(base64image)
 				.build();
 	}
 }

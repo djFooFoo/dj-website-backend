@@ -1,43 +1,46 @@
 package dj.personal.website.translation;
 
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.enableLoggingOfRequestAndResponseIfValidationFails;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.webAppContextSetup;
-import static org.hamcrest.Matchers.containsInAnyOrder;
-
+import dj.personal.website.Role;
+import io.restassured.http.ContentType;
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.context.WebApplicationContext;
 
-import io.restassured.http.ContentType;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 class TranslationControllerTest {
-	private static final String API_GET_TRANSLATIONS = "/api/translations";
+	private static final String API_GET_TRANSLATIONS = "/api/translations/";
 
 	@Autowired
 	private WebApplicationContext webApplicationContext;
 
 	@BeforeEach
 	public void setUpRestAssured() {
-		webAppContextSetup(webApplicationContext);
-		enableLoggingOfRequestAndResponseIfValidationFails();
+		RestAssuredMockMvc.webAppContextSetup(webApplicationContext);
 	}
 
 	@Test
-	@WithMockUser(username = "admin", roles = { "website-admin" })
+	@WithMockUser(username = "admin", roles = { Role.ADMIN })
 	void givenRoleAdmin_findTranslationsReturnsAllTranslationsInJsonFormat() {
 		given()
 				.when()
+				.auth().basic("admin", "EenEenvoudigWachtwoord")
 				.get(API_GET_TRANSLATIONS)
 				.then()
-				.assertThat().statusCode(HttpStatus.OK.value())
-				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("translations.keySet()", containsInAnyOrder("en", "fr", "nl"));
+				.statusCode(HttpStatus.OK.value())
+				.contentType(ContentType.JSON)
+				.body("translations.keySet()", containsInAnyOrder("en", "fr", "nl"));
 	}
 
 	@Test
@@ -46,6 +49,6 @@ class TranslationControllerTest {
 				.when()
 				.get(API_GET_TRANSLATIONS)
 				.then()
-				.assertThat().statusCode(HttpStatus.UNAUTHORIZED.value());
+				.statusCode(HttpStatus.UNAUTHORIZED.value());
 	}
 }

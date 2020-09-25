@@ -1,10 +1,8 @@
 package dj.personal.website.book;
 
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.enableLoggingOfRequestAndResponseIfValidationFails;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.webAppContextSetup;
-import static org.hamcrest.Matchers.is;
 
+import io.restassured.http.ContentType;
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.web.context.WebApplicationContext;
 
-import io.restassured.http.ContentType;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
 
 @SpringBootTest
 class BookControllerTest {
@@ -24,8 +23,7 @@ class BookControllerTest {
 
 	@BeforeEach
 	public void setUpRestAssured() {
-		webAppContextSetup(webApplicationContext);
-		enableLoggingOfRequestAndResponseIfValidationFails();
+		RestAssuredMockMvc.webAppContextSetup(webApplicationContext);
 	}
 
 	@Test
@@ -33,11 +31,12 @@ class BookControllerTest {
 	void givenRoleAdmin_findBooksReturnsAllBooksInJsonFormat() {
 		given()
 				.when()
+				.auth().basic("admin", "EenEenvoudigWachtwoord")
 				.get(API_GET_BOOKS)
 				.then()
-				.assertThat().statusCode(HttpStatus.OK.value())
-				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("size()", is(24));
+				.statusCode(HttpStatus.OK.value())
+				.contentType(ContentType.JSON)
+				.body("size()", is(26));
 	}
 
 	@Test
@@ -46,6 +45,6 @@ class BookControllerTest {
 				.when()
 				.get(API_GET_BOOKS)
 				.then()
-				.assertThat().statusCode(HttpStatus.UNAUTHORIZED.value());
+				.statusCode(HttpStatus.UNAUTHORIZED.value());
 	}
 }

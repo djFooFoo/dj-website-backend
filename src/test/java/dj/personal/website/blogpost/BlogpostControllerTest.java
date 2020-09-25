@@ -1,31 +1,33 @@
 package dj.personal.website.blogpost;
 
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.enableLoggingOfRequestAndResponseIfValidationFails;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
-import static io.restassured.module.mockmvc.RestAssuredMockMvc.webAppContextSetup;
-import static org.hamcrest.Matchers.is;
 
+import io.restassured.http.ContentType;
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.context.WebApplicationContext;
 
-import io.restassured.http.ContentType;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.is;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
-@SpringBootTest
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 class BlogpostControllerTest {
-	private static final String API_GET_BLOGPOSTS = "/api/blogposts";
+	private static final String API_GET_BLOGPOSTS = "/api/blogposts/";
 
 	@Autowired
 	private WebApplicationContext webApplicationContext;
 
 	@BeforeEach
 	public void setUpRestAssured() {
-		webAppContextSetup(webApplicationContext);
-		enableLoggingOfRequestAndResponseIfValidationFails();
+		RestAssuredMockMvc.webAppContextSetup(webApplicationContext);
 	}
 
 	@Test
@@ -33,11 +35,12 @@ class BlogpostControllerTest {
 	void givenRoleAdmin_findBlogpostsReturnsAllBlogpostsInJsonFormat() {
 		given()
 				.when()
+				.auth().basic("admin", "EenEenvoudigWachtwoord")
 				.get(API_GET_BLOGPOSTS)
 				.then()
-				.assertThat().statusCode(HttpStatus.OK.value())
-				.assertThat().contentType(ContentType.JSON)
-				.assertThat().body("size()", is(21));
+				.statusCode(HttpStatus.OK.value())
+				.contentType(ContentType.JSON)
+				.body("size()", is(25));
 	}
 
 	@Test
@@ -46,6 +49,6 @@ class BlogpostControllerTest {
 				.when()
 				.get(API_GET_BLOGPOSTS)
 				.then()
-				.assertThat().statusCode(HttpStatus.UNAUTHORIZED.value());
+				.statusCode(HttpStatus.UNAUTHORIZED.value());
 	}
 }
