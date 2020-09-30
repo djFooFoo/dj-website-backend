@@ -213,6 +213,13 @@ public class BlogpostRunner implements CommandLineRunner {
 				.category("Java")
 				.build());
 
+		blogposts.add(Blogpost.builder()
+				.title("blogpost.title.26")
+				.publicationDate(LocalDate.of(2020, Month.SEPTEMBER, 24))
+				.url("https://medium.com/better-programming/how-to-create-a-dockerfile-for-a-python-application-8d078b16bc9a?source=friends_link&sk=d365c0380159d068e84dd562fb60d82c")
+				.category("Python")
+				.build());
+
 		return blogpostRepository.saveAll(blogposts);
 	}
 }
