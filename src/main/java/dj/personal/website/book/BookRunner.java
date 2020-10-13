@@ -245,6 +245,14 @@ public class BookRunner implements CommandLineRunner {
 				.rating(3.5f)
 				.build());
 
+		books.add(Book.builder()
+				.isbn(9781617292392L)
+				.title("Soft Skills: The software developer's life manual")
+				.authors("John Sonmez")
+				.yearRead(2020)
+				.rating(4.5f)
+				.build());
+
 		return bookRepository.saveAll(books);
 	}
 }
