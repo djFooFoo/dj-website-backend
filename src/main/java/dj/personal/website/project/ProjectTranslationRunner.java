@@ -83,7 +83,7 @@ public class ProjectTranslationRunner implements CommandLineRunner {
 	}
 
 	private void translateClients() {
-		addTranslationsForKey("fod.justice", "Federal Public Service Justice", "Federale Overheidsdienst Justitie", "Service Public Fédéral Justice");
+		addTranslationsForKey("fod.justice", "Smals", "Smals", "Smals");
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {
