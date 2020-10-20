@@ -220,6 +220,13 @@ public class BlogpostRunner implements CommandLineRunner {
 				.category("Python")
 				.build());
 
+		blogposts.add(Blogpost.builder()
+				.title("blogpost.title.27")
+				.publicationDate(LocalDate.of(2020, Month.OCTOBER, 19))
+				.url("https://medium.com/better-programming/what-is-a-behaviorsubject-in-rxjs-f580e934a5b2?source=friends_link&sk=4251c5d5ad45a881a6bf131fddf82846")
+				.category("Angular")
+				.build());
+
 		return blogpostRepository.saveAll(blogposts);
 	}
 }
