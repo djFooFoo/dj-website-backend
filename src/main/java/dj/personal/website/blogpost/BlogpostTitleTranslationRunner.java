@@ -58,6 +58,8 @@ public class BlogpostTitleTranslationRunner implements CommandLineRunner {
 		addTranslationsForKey("blogpost.title.23", "5 Reasons to Become a Software Craftsman", "5 Redenen om een Software Craftsman te worden", "5 raisons de devenir un Software Craftsman");
 		addTranslationsForKey("blogpost.title.24", "3 Reasons to Switch to FastAPI", "3 Redenen om over te schakelen naar FastAPI", "3 raisons de passer à FastAPI");
 		addTranslationsForKey("blogpost.title.25", "How to Create a DockerFile for a Spring Boot Application", "Hoe maak je een DockerFile voor een Spring Boot Applicatie", "Comment créer un DockerFile pour une application de Spring Boot");
+		addTranslationsForKey("blogpost.title.26", "How to Create a DockerFile for a Python Application", "Hoe maak je een DockerFile voor een Python Applicatie", "Comment créer un DockerFile pour une application de Python");
+		addTranslationsForKey("blogpost.title.27", "What Is a BehaviorSubject in RxJs?", "Wat Is een BehaviorSubject in RxJs?", "Qu'est-ce qu'un BehaviorSubject dan RxJs?");
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {

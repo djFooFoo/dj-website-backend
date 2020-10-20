@@ -4,11 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Embeddable;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * @author dj
@@ -19,6 +15,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@EqualsAndHashCode
 public class LanguageKey implements Serializable {
 	private String language;
 	private String key;

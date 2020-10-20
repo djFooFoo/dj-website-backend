@@ -17,7 +17,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import io.micrometer.core.instrument.util.StringUtils;
 
 @Configuration
-class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Value("${cors.maxAge}")
 	private Optional<Long> maxAge = Optional.empty();
 
@@ -47,7 +47,7 @@ class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	@Bean
-	CorsConfigurationSource corsConfigurationSource(
+	public CorsConfigurationSource corsConfigurationSource(
 			@Value("#{'${cors.allowed.origins}'.split(',')}") List<String> allowedOrigins,
 			@Value("#{'${cors.allowed.methods}'.split(',')}") List<String> allowedMethods,
 			@Value("#{'${cors.resolvedMethods}'.split(',')}") List<String> resolvedMethods,
