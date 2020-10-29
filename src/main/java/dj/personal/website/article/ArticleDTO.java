@@ -1,4 +1,4 @@
-package dj.personal.website.blogpost;
+package dj.personal.website.article;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @Builder
-class BlogpostDTO {
+class ArticleDTO {
 	private final LocalDate publicationDate;
 	private final String url;
 	private final String category;

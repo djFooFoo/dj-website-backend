@@ -1,4 +1,4 @@
-package dj.personal.website.blogpost;
+package dj.personal.website.article;
 
 import static java.util.stream.Collectors.toList;
 
@@ -14,21 +14,21 @@ import org.springframework.web.bind.annotation.RestController;
 import dj.personal.website.Role;
 
 @RestController()
-class BlogpostController {
-	private final BlogpostRepository blogpostRepository;
+class ArticleController {
+	private final ArticleRepository articleRepository;
 
 	@Autowired
-	public BlogpostController(BlogpostRepository blogpostRepository) {
-		this.blogpostRepository = blogpostRepository;
+	public ArticleController(ArticleRepository articleRepository) {
+		this.articleRepository = articleRepository;
 	}
 
-	@GetMapping("api/blogposts")
+	@GetMapping("api/articles")
 	@RolesAllowed(Role.ADMIN)
-	public Collection<BlogpostDTO> findAll() {
-		return blogpostRepository.findAll()
+	public Collection<ArticleDTO> findAll() {
+		return articleRepository.findAll()
 				.stream()
-				.map(Blogpost::toDTO)
-				.sorted(Comparator.comparing(BlogpostDTO::getPublicationDate).reversed())
+				.map(Article::toDTO)
+				.sorted(Comparator.comparing(ArticleDTO::getPublicationDate).reversed())
 				.collect(toList());
 	}
 }
