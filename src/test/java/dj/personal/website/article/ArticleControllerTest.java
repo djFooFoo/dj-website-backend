@@ -1,4 +1,4 @@
-package dj.personal.website.blogpost;
+package dj.personal.website.article;
 
 
 import io.restassured.http.ContentType;
@@ -19,8 +19,8 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-class BlogpostControllerTest {
-	private static final String API_GET_BLOGPOSTS = "/api/blogposts/";
+class ArticleControllerTest {
+	private static final String API_GET_ARTICLES = "/api/articles/";
 
 	@Autowired
 	private WebApplicationContext webApplicationContext;
@@ -32,11 +32,11 @@ class BlogpostControllerTest {
 
 	@Test
 	@WithMockUser(username = "admin", roles = { "website-admin" })
-	void givenRoleAdmin_findBlogpostsReturnsAllBlogpostsInJsonFormat() {
+	void givenRoleAdmin_findArticlesReturnsAllArticlesInJsonFormat() {
 		given()
 				.when()
 				.auth().basic("admin", "EenEenvoudigWachtwoord")
-				.get(API_GET_BLOGPOSTS)
+				.get(API_GET_ARTICLES)
 				.then()
 				.statusCode(HttpStatus.OK.value())
 				.contentType(ContentType.JSON)
@@ -44,10 +44,10 @@ class BlogpostControllerTest {
 	}
 
 	@Test
-	void givenNoRole_FindBlogpostsReturnsUnauthorized() {
+	void givenNoRole_FindArticlesReturnsUnauthorized() {
 		given()
 				.when()
-				.get(API_GET_BLOGPOSTS)
+				.get(API_GET_ARTICLES)
 				.then()
 				.statusCode(HttpStatus.UNAUTHORIZED.value());
 	}

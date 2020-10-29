@@ -29,10 +29,10 @@ public class CertificateTranslationRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		translateBlogpostTitles();
+		translateArticleTitles();
 	}
 
-	private void translateBlogpostTitles() {
+	private void translateArticleTitles() {
 		addTranslationsForKey("deep.learning.specialization", "Deep Learning Specialization", "Deep Learning Specialisatie", "Spécialisation de l'apprentissage profond");
 		addTranslationsForKey("ai.for.everyone", "AI For Everyone", "AI voor iedereen", "L'IA pour tous");
 		addTranslationsForKey("angular.challenge", "Angular Challenge Finalist", "Angular Challenge Finalist", "Finaliste d'Angular Challenge");

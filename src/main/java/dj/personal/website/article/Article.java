@@ -1,4 +1,4 @@
-package dj.personal.website.blogpost;
+package dj.personal.website.article;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +20,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-class Blogpost {
+class Article {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -35,8 +34,8 @@ class Blogpost {
 
 	private String category;
 
-	BlogpostDTO toDTO() {
-		return BlogpostDTO.builder()
+	ArticleDTO toDTO() {
+		return ArticleDTO.builder()
 				.title(title)
 				.publicationDate(publicationDate)
 				.url(url)
