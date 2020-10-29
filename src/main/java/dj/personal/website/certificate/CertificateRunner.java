@@ -34,20 +34,40 @@ public class CertificateRunner implements CommandLineRunner {
 	private Collection<Certificate> createCertificates() {
 		createAndSaveCertificate("Oracle Certified Professional: Java SE 11 Programmer", LocalDate.of(2019, Month.DECEMBER, 1), "Oracle", CertificateType.CERTIFICATE,
 				"https://www.youracclaim.com/badges/6479b37c-a8aa-4412-adc4-f7ada40176a6/public_url");
-		createAndSaveCertificate("Oracle Certified Associate, Java SE 8 Programmer", LocalDate.of(2019, Month.SEPTEMBER, 1), "Oracle", CertificateType.CERTIFICATE,
+		createAndSaveCertificate("Oracle Certified Associate, Java SE 8 Programmer", LocalDate.of(2016, Month.SEPTEMBER, 1), "Oracle", CertificateType.CERTIFICATE,
 				"https://www.youracclaim.com/badges/3ec8731f-0c1a-4075-bdf0-b6c8d5f0cbe3/public_url");
 		createAndSaveCertificate("Professional Scrum Developer I", LocalDate.of(2017, Month.APRIL, 1), "Scrum.org", CertificateType.CERTIFICATE,
 				"https://www.scrum.org/user/243806");
 		createAndSaveCertificate("EXIN Agile Scrum Foundation", LocalDate.of(2019, Month.SEPTEMBER, 1), "Exin", CertificateType.CERTIFICATE,
 				"https://exeed.pro/badge/43740");
+
+
+
+		createAndSaveCertificate("Android", LocalDate.of(2016, Month.NOVEMBER, 1), "Continuum Consulting NV", CertificateType.COURSE, "");
+		createAndSaveCertificate("Angular.js", LocalDate.of(2016, Month.DECEMBER, 1), "Continuum Consulting NV", CertificateType.COURSE, "");
+		createAndSaveCertificate("Angular & Node.js", LocalDate.of(2017, Month.FEBRUARY, 1), "Continuum Consulting NV", CertificateType.COURSE, "");
 		createAndSaveCertificate("deep.learning.specialization", LocalDate.of(2019, Month.MAY, 1), "Coursera", CertificateType.COURSE,
 				"https://www.coursera.org/account/accomplishments/specialization/SXJNRZSW2FNQ");
 		createAndSaveCertificate("ai.for.everyone", LocalDate.of(2019, Month.MARCH, 1), "Coursera", CertificateType.COURSE,
 				"https://www.coursera.org/account/accomplishments/verify/FL5WAVUSXLXE");
-		createAndSaveCertificate("angular.challenge", LocalDate.of(2019, Month.MAY, 1), "NG-BE, Google, Innovatus, Showpad, EDITx", CertificateType.AWARD,
-				"https://photos.google.com/share/AF1QipMGr_Fnj3VeEW0UJ7GJ_71Imb5zBI6m8JhO99nQPDmf_5mOqX9EtOi4rlBuEtU18Q?key=QXplbTItTExCZGhrd0FCNGMzc3Jwd05EVTJRYVlB");
 		createAndSaveCertificate("pytorch.deep.learning", LocalDate.of(2020, Month.MAY, 1), "Udemy", CertificateType.COURSE,
 				"https://www.udemy.com/certificate/UC-ae1c4739-0ce8-4153-bc4d-9492d58aed8c/");
+		createAndSaveCertificate("DDD Event Storming", LocalDate.of(2019, Month.JUNE, 26), "Value Object", CertificateType.COURSE, "");
+		//createAndSaveCertificate("AWS Certified Developer", LocalDate.of(2020, Month.OCTOBER, 20), "Udemy", CertificateType.COURSE, "");
+
+
+
+		createAndSaveCertificate("dotAI Paris", LocalDate.of(2018, Month.MAY, 31), "DotAI", CertificateType.CONFERENCE, "http://www.dotai.io");
+		createAndSaveCertificate("Re-work Deep Learning Summit London", LocalDate.of(2018, Month.SEPTEMBER, 20), "Re-work", CertificateType.CONFERENCE, "");
+		createAndSaveCertificate("World Summit AI Amsterdam", LocalDate.of(2018, Month.OCTOBER, 10), "Inspired Minds", CertificateType.CONFERENCE, "");
+		createAndSaveCertificate("Devoxx", LocalDate.of(2018, Month.NOVEMBER, 13), "Devoxx", CertificateType.CONFERENCE, "");
+		createAndSaveCertificate("ML Conference Munich", LocalDate.of(2019, Month.JUNE, 18), "S&S Media", CertificateType.CONFERENCE, "");
+		createAndSaveCertificate("ML Conference Online", LocalDate.of(2020, Month.JULY, 29), "S&S Media", CertificateType.CONFERENCE, "");
+
+		createAndSaveCertificate("angular.challenge", LocalDate.of(2019, Month.MAY, 1), "NG-BE, Google, Innovatus, Showpad, EDITx", CertificateType.AWARD,
+				"https://photos.google.com/share/AF1QipMGr_Fnj3VeEW0UJ7GJ_71Imb5zBI6m8JhO99nQPDmf_5mOqX9EtOi4rlBuEtU18Q?key=QXplbTItTExCZGhrd0FCNGMzc3Jwd05EVTJRYVlB");
+		createAndSaveCertificate("angular.challenge", LocalDate.of(2020, Month.SEPTEMBER, 1), "NG-BE, Google, Innovatus, Showpad, EDITx", CertificateType.AWARD,
+				"");
 
 		return certificateRepository.findAll();
 	}

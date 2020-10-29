@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 enum CertificateType {
 	COURSE,
 	CERTIFICATE,
-	AWARD;
+	AWARD,
+	CONFERENCE;
 
 	@JsonValue
 	public String toValue() {
