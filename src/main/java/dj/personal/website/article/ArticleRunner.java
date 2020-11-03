@@ -227,6 +227,13 @@ public class ArticleRunner implements CommandLineRunner {
 				.category("Angular")
 				.build());
 
+		articles.add(Article.builder()
+				.title("article.title.28")
+				.publicationDate(LocalDate.of(2020, Month.OCTOBER, 28))
+				.url("https://medium.com/better-programming/the-6-qualities-of-a-great-software-crafter-8abf0f8b36d9?source=friends_link&sk=1e8db84bfe2354055eb381ae047727cc")
+				.category("Programming")
+				.build());
+
 		return articleRepository.saveAll(articles);
 	}
 }
