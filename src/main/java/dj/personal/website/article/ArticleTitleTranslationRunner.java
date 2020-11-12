@@ -61,6 +61,8 @@ public class ArticleTitleTranslationRunner implements CommandLineRunner {
 		addTranslationsForKey("article.title.26", "How to Create a DockerFile for a Python Application", "Hoe maak je een DockerFile voor een Python Applicatie", "Comment créer un DockerFile pour une application de Python");
 		addTranslationsForKey("article.title.27", "What Is a BehaviorSubject in RxJs?", "Wat Is een BehaviorSubject in RxJs?", "Qu'est-ce qu'un BehaviorSubject dan RxJs?");
 		addTranslationsForKey("article.title.28", "The 6 Qualities of a Great Software Crafter", "De 6 Kwaliteiten van een Geweldige Software Crafter", "Les 6 qualités d'un grand créateur de logiciels");
+		addTranslationsForKey("article.title.29", "How to Make Your Development Team More Effective", "Hoe Maakt u uw Development Departement Effectiever", "Comment Rendre Votre Service de Développement Plus Efficace");
+		addTranslationsForKey("article.title.30", "How to Create a CSV File in Python", "Hoe Maak je een CSV-bestand aan in Python", "Comment Créer un Fichier CSV en Python");
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {
