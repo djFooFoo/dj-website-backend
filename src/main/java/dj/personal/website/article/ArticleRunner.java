@@ -234,6 +234,20 @@ public class ArticleRunner implements CommandLineRunner {
 				.category("Software Development")
 				.build());
 
+		articles.add(Article.builder()
+				.title("article.title.29")
+				.publicationDate(LocalDate.of(2020, Month.NOVEMBER, 6))
+				.url("https://medium.com/better-programming/how-to-make-your-development-department-more-productive-adc4613ff12a?source=friends_link&sk=78782180ccb6e0e0cdc0bac016abdbae")
+				.category("Software Development")
+				.build());
+
+		articles.add(Article.builder()
+				.title("article.title.30")
+				.publicationDate(LocalDate.of(2020, Month.NOVEMBER, 11))
+				.url("https://medium.com/better-programming/how-to-create-a-csv-file-in-python-aff1773b2de1?source=friends_link&sk=31c7ddaf9001264f6339540bfda91ec8")
+				.category("Software Development")
+				.build());
+
 		return articleRepository.saveAll(articles);
 	}
 }
