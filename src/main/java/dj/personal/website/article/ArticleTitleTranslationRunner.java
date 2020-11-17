@@ -63,6 +63,7 @@ public class ArticleTitleTranslationRunner implements CommandLineRunner {
 		addTranslationsForKey("article.title.28", "The 6 Qualities of a Great Software Crafter", "De 6 Kwaliteiten van een Geweldige Software Crafter", "Les 6 qualités d'un grand créateur de logiciels");
 		addTranslationsForKey("article.title.29", "How to Make Your Development Team More Effective", "Hoe Maakt u uw Development Departement Effectiever", "Comment Rendre Votre Service de Développement Plus Efficace");
 		addTranslationsForKey("article.title.30", "How to Create a CSV File in Python", "Hoe Maak je een CSV-bestand aan in Python", "Comment Créer un Fichier CSV en Python");
+		addTranslationsForKey("article.title.31", "How to Create a Hamburger Menu in Angular", "Hoe maak je een 'hamburger menu' in Angular?", "Comment Créer un 'hamburger menu' en Angular");
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {
