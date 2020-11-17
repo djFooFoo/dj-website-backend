@@ -248,6 +248,13 @@ public class ArticleRunner implements CommandLineRunner {
 				.category("Software Development")
 				.build());
 
+		articles.add(Article.builder()
+				.title("article.title.31")
+				.publicationDate(LocalDate.of(2020, Month.NOVEMBER, 12))
+				.url("https://medium.com/better-programming/how-to-create-a-hamburger-menu-in-angular-370b8ebdd7bb?source=friends_link&sk=756eac646e6cc5a3981c5ddf4934aeaa")
+				.category("Software Development")
+				.build());
+
 		return articleRepository.saveAll(articles);
 	}
 }
