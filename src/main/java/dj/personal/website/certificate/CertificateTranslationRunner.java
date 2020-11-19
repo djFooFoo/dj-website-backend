@@ -1,7 +1,6 @@
 package dj.personal.website.certificate;
 
 import static dj.personal.website.translation.ApplicationLocale.EN;
-import static dj.personal.website.translation.ApplicationLocale.FR;
 import static dj.personal.website.translation.ApplicationLocale.NL;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,11 +32,11 @@ public class CertificateTranslationRunner implements CommandLineRunner {
 	}
 
 	private void translateArticleTitles() {
-		addTranslationsForKey("deep.learning.specialization", "Deep Learning Specialization", "Deep Learning Specialisatie", "Spécialisation de l'apprentissage profond");
-		addTranslationsForKey("ai.for.everyone", "AI For Everyone", "AI voor iedereen", "L'IA pour tous");
-		addTranslationsForKey("angular.challenge", "Angular Challenge Finalist", "Angular Challenge Finalist", "Finaliste d'Angular Challenge");
-		addTranslationsForKey("pytorch.deep.learning", "PyTorch: Deep Learning and Artificial Intelligence", "PyTorch: Deep Learning en Artificiële Intelligentie",
-				"PyTorch: Deep Learning et Intelligence Artificielle");
+		addTranslationsForKey("deep.learning.specialization", "Deep Learning Specialization", "Deep Learning Specialisatie");
+		addTranslationsForKey("ai.for.everyone", "AI For Everyone", "AI voor iedereen");
+		addTranslationsForKey("angular.challenge", "Angular Challenge Finalist", "Angular Challenge Finalist");
+		addTranslationsForKey("pytorch.deep.learning", "PyTorch: Deep Learning and Artificial Intelligence", "PyTorch: Deep Learning en Artificiële Intelligentie"
+		);
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {
@@ -56,9 +55,8 @@ public class CertificateTranslationRunner implements CommandLineRunner {
 		translatedValueRepository.save(translatedValue);
 	}
 
-	private void addTranslationsForKey(String key, String enValue, String nlValue, String frValue) {
+	private void addTranslationsForKey(String key, String enValue, String nlValue) {
 		addForLanguage(key, EN, enValue);
 		addForLanguage(key, NL, nlValue);
-		addForLanguage(key, FR, frValue);
 	}
 }
