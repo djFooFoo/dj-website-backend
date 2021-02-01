@@ -14,8 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn spring-boot:run'
-                sh 'mvn test'
+                sh 'nohup mvn spring-boot:run && mvn test'
             }
         }
         stage('Deploy') {
