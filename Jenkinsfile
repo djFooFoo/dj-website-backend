@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'java -jar target/*.jar'
+                sh 'BUILD_ID=dontKillMe nohup mvn spring-boot:run &'
                 sh 'mvn test'
             }
         }
