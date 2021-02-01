@@ -22,8 +22,8 @@ public class BookTitleTranslationRunnerTest {
 	private BookTitleTranslationRunner bookTitleTranslationRunner;
 
 	@Test
-	public void addsNlAndFrTranslationForEveryBook() {
-		int amountOfTranslationsExpected = 2 * 26;
+	public void addsNlTranslationForEveryBook() {
+		int amountOfTranslationsExpected = 26;
 
 		bookTitleTranslationRunner.run();
 
