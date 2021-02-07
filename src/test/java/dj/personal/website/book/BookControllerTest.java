@@ -36,7 +36,7 @@ class BookControllerTest {
 				.then()
 				.statusCode(HttpStatus.OK.value())
 				.contentType(ContentType.JSON)
-				.body("size()", is(26));
+				.body("size()", is(27));
 	}
 
 	@Test
