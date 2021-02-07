@@ -255,6 +255,13 @@ public class ArticleRunner implements CommandLineRunner {
 				.category("Frontend")
 				.build());
 
+		articles.add(Article.builder()
+				.title("article.title.32")
+				.publicationDate(LocalDate.of(2020, Month.NOVEMBER, 26))
+				.url("https://towardsdatascience.com/what-is-deep-learning-33a32858ea6d?sk=0d2844e9566813b96fdefa29f4300ae1")
+				.category("AI")
+				.build());
+
 		return articleRepository.saveAll(articles);
 	}
 }
