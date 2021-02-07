@@ -262,6 +262,13 @@ public class ArticleRunner implements CommandLineRunner {
 				.category("AI")
 				.build());
 
+		articles.add(Article.builder()
+				.title("article.title.33")
+				.publicationDate(LocalDate.of(2021, Month.DECEMBER, 12))
+				.url("https://medium.com/better-programming/what-is-a-tensor-9df05c178a39?source=friends_link&sk=7134bf7117f004ce1c053db6418c864a")
+				.category("AI")
+				.build());
+
 		return articleRepository.saveAll(articles);
 	}
 }

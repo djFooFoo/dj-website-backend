@@ -64,6 +64,7 @@ public class ArticleTitleTranslationRunner implements CommandLineRunner {
 		addTranslationsForKey("article.title.30", "How to Create a CSV File in Python", "Hoe Maak je een CSV-bestand aan in Python");
 		addTranslationsForKey("article.title.31", "How to Create a Hamburger Menu in Angular", "Hoe maak je een 'hamburger menu' in Angular?");
 		addTranslationsForKey("article.title.32", "What is Deep Learning?", "Wat is Deep Learning?");
+		addTranslationsForKey("article.title.33", "What Is a Tensor?", "Wat is een Tensor?");
 	}
 
 	private void addForLanguage(String key, ApplicationLocale locale, String value) {
