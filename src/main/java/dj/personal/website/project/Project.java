@@ -33,8 +33,11 @@ class Project implements Comparable<Project> {
 	private String icon;
 	private String client;
 	private String jobTitle;
-	private String jobDescription;
 	private String timeSpan;
+
+	@OneToMany(mappedBy = "project")
+	@Fetch(FetchMode.JOIN)
+	private Set<Responsibility> responsibilitySet;
 
 	@OneToMany(mappedBy = "project")
 	@Fetch(FetchMode.JOIN)
@@ -45,10 +48,16 @@ class Project implements Comparable<Project> {
 				.icon(icon)
 				.client(client)
 				.jobTitle(jobTitle)
-				.jobDescription(jobDescription)
 				.timeSpan(timeSpan)
+				.responsibilities(getResponsibilityNames())
 				.technologies(getTechnologyNames())
 				.build();
+	}
+
+	private Set<String> getResponsibilityNames() {
+		return responsibilitySet.stream()
+				.map(Responsibility::getName)
+				.collect(toSet());
 	}
 
 	private Set<String> getTechnologyNames() {

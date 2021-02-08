@@ -11,7 +11,7 @@ class ProjectDTO {
 	private String icon;
 	private String client;
 	private String jobTitle;
-	private String jobDescription;
 	private String timeSpan;
+	private Set<String> responsibilities;
 	private Set<String> technologies;
 }
