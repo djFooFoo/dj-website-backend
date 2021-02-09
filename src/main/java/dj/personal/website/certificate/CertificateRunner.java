@@ -52,12 +52,12 @@ public class CertificateRunner implements CommandLineRunner {
 		createAndSaveCertificate("DDD Event Storming", LocalDate.of(2019, Month.JUNE, 26), "Value Object", CertificateType.COURSE, "");
 		createAndSaveCertificate("Ultimate AWS Certified Developer Associate 2020", LocalDate.of(2020, Month.DECEMBER, 20), "Udemy", CertificateType.COURSE,
 				"https://www.udemy.com/certificate/UC-a72146e0-7fd3-43c6-90f6-39d3d4f656ed/");
-		createAndSaveCertificate("dotAI Paris", LocalDate.of(2018, Month.MAY, 31), "DotAI", CertificateType.CONFERENCE_ATTENDANCE, "http://www.dotai.io");
-		createAndSaveCertificate("Re-work Deep Learning Summit London", LocalDate.of(2018, Month.SEPTEMBER, 20), "Re-work", CertificateType.CONFERENCE_ATTENDANCE, "");
-		createAndSaveCertificate("World Summit AI Amsterdam", LocalDate.of(2018, Month.OCTOBER, 10), "Inspired Minds", CertificateType.CONFERENCE_ATTENDANCE, "");
-		createAndSaveCertificate("Devoxx", LocalDate.of(2018, Month.NOVEMBER, 13), "Devoxx", CertificateType.CONFERENCE_ATTENDANCE, "");
-		createAndSaveCertificate("ML Conference Munich", LocalDate.of(2019, Month.JUNE, 18), "S&S Media", CertificateType.CONFERENCE_ATTENDANCE, "");
-		createAndSaveCertificate("ML Conference Online", LocalDate.of(2020, Month.JULY, 29), "S&S Media", CertificateType.CONFERENCE_ATTENDANCE, "");
+		createAndSaveCertificate("dotAI Paris", LocalDate.of(2018, Month.MAY, 31), "DotAI", CertificateType.ATTENDEE, "http://www.dotai.io");
+		createAndSaveCertificate("Re-work Deep Learning Summit London", LocalDate.of(2018, Month.SEPTEMBER, 20), "Re-work", CertificateType.ATTENDEE, "");
+		createAndSaveCertificate("World Summit AI Amsterdam", LocalDate.of(2018, Month.OCTOBER, 10), "Inspired Minds", CertificateType.ATTENDEE, "");
+		createAndSaveCertificate("Devoxx", LocalDate.of(2018, Month.NOVEMBER, 13), "Devoxx", CertificateType.ATTENDEE, "");
+		createAndSaveCertificate("ML Conference Munich", LocalDate.of(2019, Month.JUNE, 18), "S&S Media", CertificateType.ATTENDEE, "");
+		createAndSaveCertificate("ML Conference Online", LocalDate.of(2020, Month.JULY, 29), "S&S Media", CertificateType.ATTENDEE, "");
 		createAndSaveCertificate("Angular Challenge Finalist", LocalDate.of(2019, Month.MAY, 1), "NG-BE, Google, Innovatus, Showpad, EDITx", CertificateType.AWARD,
 				"https://photos.google.com/share/AF1QipMGr_Fnj3VeEW0UJ7GJ_71Imb5zBI6m8JhO99nQPDmf_5mOqX9EtOi4rlBuEtU18Q?key=QXplbTItTExCZGhrd0FCNGMzc3Jwd05EVTJRYVlB");
 		createAndSaveCertificate("Angular Challenge Finalist", LocalDate.of(2020, Month.SEPTEMBER, 1), "NG-BE, Google, Innovatus, Showpad, EDITx", CertificateType.AWARD,
