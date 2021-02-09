@@ -6,7 +6,7 @@ enum CertificateType {
 	COURSE,
 	CERTIFICATE,
 	AWARD,
-	CONFERENCE;
+	CONFERENCE_ATTENDANCE;
 
 	@JsonValue
 	public String toValue() {

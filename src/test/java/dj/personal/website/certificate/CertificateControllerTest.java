@@ -37,7 +37,7 @@ class CertificateControllerTest {
 				.then()
 				.statusCode(HttpStatus.OK.value())
 				.contentType(ContentType.JSON)
-				.body("size()", is(19));
+				.body("size()", is(20));
 	}
 
 	@Test
