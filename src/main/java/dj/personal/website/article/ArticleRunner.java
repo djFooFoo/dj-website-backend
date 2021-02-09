@@ -74,21 +74,21 @@ public class ArticleRunner implements CommandLineRunner {
 				.build());
 
 		articles.add(Article.builder()
-				.title("How To Create a WebSocket in Python?")
+				.title("How To Create a WebSocket in Python")
 				.publicationDate(LocalDate.of(2020, Month.JANUARY, 9))
 				.url("https://medium.com/better-programming/how-to-create-a-websocket-in-python-b68d65dbd549?source=friends_link&sk=556dcc527edf1d277053396332a270bd")
 				.category("Backend")
 				.build());
 
 		articles.add(Article.builder()
-				.title("What goes into a Dockerfile?")
+				.title("What goes into a Dockerfile")
 				.publicationDate(LocalDate.of(2020, Month.JANUARY, 22))
 				.url("https://medium.com/better-programming/what-goes-into-a-dockerfile-ff0ace591060?source=friends_link&sk=6a4bdaf97cb6e7e76afe8fc733a1023f")
 				.category("Other")
 				.build());
 
 		articles.add(Article.builder()
-				.title("What Is a UUID and How Are They Generated?")
+				.title("What Is a UUID and How Are They Generated")
 				.publicationDate(LocalDate.of(2020, Month.JANUARY, 29))
 				.url("https://medium.com/better-programming/what-is-a-uuid-and-how-are-they-generated-17f0acbd7233?source=friends_link&sk=9a136dd22416eccab08ed346b556e6b2")
 				.category("Other")
@@ -102,21 +102,21 @@ public class ArticleRunner implements CommandLineRunner {
 				.build());
 
 		articles.add(Article.builder()
-				.title("How to Create an Angular Dockerfile?")
+				.title("How to Create an Angular Dockerfile")
 				.publicationDate(LocalDate.of(2020, Month.FEBRUARY, 8))
 				.url("https://medium.com/better-programming/how-to-create-an-angular-dockerfile-75c059e7f8e8?source=friends_link&sk=363c8b21aafe83e1e5f84feed047e969")
 				.category("Frontend")
 				.build());
 
 		articles.add(Article.builder()
-				.title("What Is Modularity in Java?")
+				.title("What Is Modularity in Java")
 				.publicationDate(LocalDate.of(2020, Month.FEBRUARY, 21))
 				.url("https://medium.com/better-programming/what-is-modularity-in-java-b1938a2304fd?source=friends_link&sk=202d13eb91c66a8fbec5580290b89c45")
 				.category("Backend")
 				.build());
 
 		articles.add(Article.builder()
-				.title("How Does Docker Port Binding Work?")
+				.title("How Does Docker Port Binding Work")
 				.publicationDate(LocalDate.of(2020, Month.MARCH, 10))
 				.url("https://medium.com/better-programming/how-does-docker-port-binding-work-b089f23ca4c8?source=friends_link&sk=40c9fbcdc4172bb065711ab554e9b1c2")
 				.category("Other")
@@ -158,7 +158,7 @@ public class ArticleRunner implements CommandLineRunner {
 				.build());
 
 		articles.add(Article.builder()
-				.title("What is Domain-Driven Design?")
+				.title("What is Domain-Driven Design")
 				.publicationDate(LocalDate.of(2020, Month.MAY, 10))
 				.url("https://towardsdatascience.com/what-is-domain-driven-design-5ea1e98285e4?source=friends_link&sk=736dd1f5a15a6a5fe324ef9e6e4dee2f")
 				.category("Other")
@@ -186,7 +186,7 @@ public class ArticleRunner implements CommandLineRunner {
 				.build());
 
 		articles.add(Article.builder()
-				.title("How To Use Google Analytics in Angular?")
+				.title("How To Use Google Analytics in Angular")
 				.publicationDate(LocalDate.of(2020, Month.JUNE, 23))
 				.url("https://medium.com/swlh/enable-angular-google-analytics-14acac59e998?source=friends_link&sk=c4d260fbdc705b9947c665b17a8e923e")
 				.category("Frontend")
@@ -221,7 +221,7 @@ public class ArticleRunner implements CommandLineRunner {
 				.build());
 
 		articles.add(Article.builder()
-				.title("What Is a BehaviorSubject in RxJs?")
+				.title("What Is a BehaviorSubject in RxJs")
 				.publicationDate(LocalDate.of(2020, Month.OCTOBER, 19))
 				.url("https://medium.com/better-programming/what-is-a-behaviorsubject-in-rxjs-f580e934a5b2?source=friends_link&sk=4251c5d5ad45a881a6bf131fddf82846")
 				.category("Frontend")
@@ -256,14 +256,14 @@ public class ArticleRunner implements CommandLineRunner {
 				.build());
 
 		articles.add(Article.builder()
-				.title("What is Deep Learning?")
+				.title("What is Deep Learning")
 				.publicationDate(LocalDate.of(2020, Month.NOVEMBER, 26))
 				.url("https://towardsdatascience.com/what-is-deep-learning-33a32858ea6d?sk=0d2844e9566813b96fdefa29f4300ae1")
 				.category("AI")
 				.build());
 
 		articles.add(Article.builder()
-				.title("What Is a Tensor?")
+				.title("What Is a Tensor")
 				.publicationDate(LocalDate.of(2021, Month.JANUARY, 12))
 				.url("https://medium.com/better-programming/what-is-a-tensor-9df05c178a39?source=friends_link&sk=7134bf7117f004ce1c053db6418c864a")
 				.category("AI")
