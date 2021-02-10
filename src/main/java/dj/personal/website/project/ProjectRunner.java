@@ -70,7 +70,7 @@ public class ProjectRunner implements CommandLineRunner {
 				),
 				ravagoProject);
 
-		Project smalsProject = createAndSaveProject("fa-file", "Smals", "Leading Developer", "September 2018 - present");
+		Project smalsProject = createAndSaveProject("fa-file", "Smals", "Lead Developer", "September 2018 - present");
 		createAndSaveTechnologies(
 				asSet("Java 8", "Spring", "Angular", "Jasmine", "CouchDB", "ElasticSearch",
 						"Mockito", "JUnit", "Nginx", "REST Assured", "AssertJ", "Intellij", "Jira", "Git", "Scrum/Agile",
