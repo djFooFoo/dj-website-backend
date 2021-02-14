@@ -269,6 +269,13 @@ public class ArticleRunner implements CommandLineRunner {
 				.category("AI")
 				.build());
 
+		articles.add(Article.builder()
+				.title("How To Push a Docker Image to Amazon ECR With Jenkins")
+				.publicationDate(LocalDate.of(2021, Month.FEBRUARY, 12))
+				.url("https://medium.com/better-programming/how-to-push-a-docker-image-to-amazon-ecr-with-jenkins-ed4b042e141a?source=friends_link&sk=59e1f6ebac8a770086c4245d685c305d")
+				.category("Other")
+				.build());
+
 		return articleRepository.saveAll(articles);
 	}
 }

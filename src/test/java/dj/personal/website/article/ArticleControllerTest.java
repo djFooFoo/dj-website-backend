@@ -40,7 +40,7 @@ class ArticleControllerTest {
 				.then()
 				.statusCode(HttpStatus.OK.value())
 				.contentType(ContentType.JSON)
-				.body("size()", is(33));
+				.body("size()", is(34));
 	}
 
 	@Test
