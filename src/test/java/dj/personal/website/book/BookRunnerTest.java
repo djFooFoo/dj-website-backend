@@ -22,7 +22,6 @@ public class BookRunnerTest {
 
 	@Test
 	public void addsBooksToRepository() {
-
 		bookRunner.run();
 
 		verify(bookRepository).saveAll(anyList());
