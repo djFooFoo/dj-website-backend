@@ -1,18 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Install') {
-            agent {
-                docker {
-                    image 'maven:latest'
-                    args '-v /root/.m2:/root/.m2'
-                }
-            }
-            steps {
-                sh 'java -version'
-                sh 'mvn clean install -DskipTests'
-            }
-        }
         stage('Test') {
             agent {
                 docker {
@@ -21,8 +9,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'BUILD_ID=dontKillMe nohup mvn spring-boot:run &'
-                sh 'mvn test'
+                sh 'java -version'
+                sh 'mvn clean install'
             }
         }
         stage('Deploy') {
