@@ -30,8 +30,10 @@ public class BookRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		Collection<Book> books = createBooks();
-		log.info(books.size() + " books have been saved to the database.");
+		if(bookRepository.count() == 0) {
+			Collection<Book> books = createBooks();
+			log.info(books.size() + " books have been saved to the database.");
+		}
 	}
 
 	private Collection<Book> createBooks() {

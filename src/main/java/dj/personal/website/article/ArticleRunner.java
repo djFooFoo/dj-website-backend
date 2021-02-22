@@ -29,10 +29,12 @@ public class ArticleRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		Collection<Article> articles = createArticles();
+		if(articleRepository.count() == 0){
+			Collection<Article> articles = createArticles();
 
-		int size = articles.size();
-		log.info(size + " articles have been saved to the database.");
+			int size = articles.size();
+			log.info(size + " articles have been saved to the database.");
+		}
 	}
 
 	private Collection<Article> createArticles() {

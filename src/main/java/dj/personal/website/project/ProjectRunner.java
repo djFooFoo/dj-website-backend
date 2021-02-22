@@ -35,15 +35,17 @@ public class ProjectRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		Collection<Project> projects = createProjects();
+		if(projectRepository.count() == 0){
+			Collection<Project> projects = createProjects();
 
-		log.info(projects.size() + " projects have been saved to the database.");
+			log.info(projects.size() + " projects have been saved to the database.");
 
-		Collection<Technology> technologies = technologyRepository.findAll();
-		log.info(technologies.size() + " technologies have been saved to the database.");
+			Collection<Technology> technologies = technologyRepository.findAll();
+			log.info(technologies.size() + " technologies have been saved to the database.");
 
-		Collection<Responsibility> responsibilities = responsibilityRepository.findAll();
-		log.info(responsibilities.size() + " responsibilities have been saved to the database.");
+			Collection<Responsibility> responsibilities = responsibilityRepository.findAll();
+			log.info(responsibilities.size() + " responsibilities have been saved to the database.");
+		}
 	}
 
 	private Collection<Project> createProjects() {

@@ -25,10 +25,12 @@ public class CertificateRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		Collection<Certificate> certificates = createCertificates();
+		if(certificateRepository.count() == 0) {
+			Collection<Certificate> certificates = createCertificates();
 
-		int size = certificates.size();
-		log.info(size + " certificates have been saved to the database.");
+			int size = certificates.size();
+			log.info(size + " certificates have been saved to the database.");
+		}
 	}
 
 	private Collection<Certificate> createCertificates() {
