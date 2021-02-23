@@ -3,6 +3,7 @@ package dj.personal.website.article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Comparator;
 
@@ -25,17 +26,6 @@ public class ArticleService {
     }
 
     public Article save(Article article) {
-        Article updatedArticle = articleRepository.findById(article.getId())
-                .map(oldArticle -> Article.builder()
-                        .id(oldArticle.getId())
-                        .category(article.getCategory())
-                        .introduction(article.getIntroduction())
-                        .publicationDate(article.getPublicationDate())
-                        .title(article.getTitle())
-                        .url(article.getUrl())
-                        .build()
-                ).orElse(article);
-
-        return articleRepository.save(updatedArticle);
+        return articleRepository.save(article);
     }
 }

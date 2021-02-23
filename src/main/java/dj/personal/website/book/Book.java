@@ -24,7 +24,6 @@ class Book {
 	@Id
 	private Long isbn;
 
-	@Column(unique = true)
 	private String title;
 
 	private String authors;
