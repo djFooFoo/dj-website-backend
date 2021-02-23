@@ -43,28 +43,28 @@ public class ArticleRunner implements CommandLineRunner {
 		articles.add(Article.builder()
 				.title("Hey Alexa! Order us two pizzas please")
 				.publicationDate(LocalDate.of(2018, Month.FEBRUARY, 12))
-				.url("https://www.continuum.be/2018/02/12/hey-alexa-order-us-two-pizzas-please/")
+				.url("https://www.continuum.be/blog/hey-alexa-order-us-two-pizzas-please/")
 				.category("AI")
 				.build());
 
 		articles.add(Article.builder()
 				.title("Machine learning on source code")
 				.publicationDate(LocalDate.of(2018, Month.JUNE, 8))
-				.url("https://www.continuum.be/2018/06/08/machine-learning-on-source-code/")
+				.url("https://www.continuum.be/blog/machine-learning-on-source-code/")
 				.category("AI")
 				.build());
 
 		articles.add(Article.builder()
 				.title("Deep Instinct – Malware detection using deep learning")
 				.publicationDate(LocalDate.of(2018, Month.NOVEMBER, 2))
-				.url("https://www.continuum.be/2018/11/02/deep-instinct-malware-detection-using-deep-learning/")
+				.url("https://www.continuum.be/blog/deep-instinct-malware-detection-using-deep-learning/")
 				.category("AI")
 				.build());
 
 		articles.add(Article.builder()
 				.title("Destructuring")
 				.publicationDate(LocalDate.of(2019, Month.MAY, 8))
-				.url("https://www.continuum.be/2019/05/08/destructuring-javascript/")
+				.url("https://www.continuum.be/blog/destructuring-javascript/")
 				.category("Frontend")
 				.build());
 
@@ -72,6 +72,13 @@ public class ArticleRunner implements CommandLineRunner {
 				.title("Angular & Ngx-Translate")
 				.publicationDate(LocalDate.of(2019, Month.DECEMBER, 7))
 				.url("https://medium.com/better-programming/fantastic-translations-and-where-to-find-them-421ee46f59db?source=friends_link&sk=7ddb4e05714d19bcf4671fbc0856fdd1")
+				.category("Frontend")
+				.build());
+
+		articles.add(Article.builder()
+				.title("Heroku, Making Deploys Great Again!")
+				.publicationDate(LocalDate.of(2019, Month.DECEMBER, 16))
+				.url("https://www.continuum.be/blog/heroku-making-deploys-great-again/")
 				.category("Frontend")
 				.build());
 
