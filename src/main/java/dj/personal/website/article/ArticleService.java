@@ -25,7 +25,17 @@ public class ArticleService {
     }
 
     public Article save(Article article) {
-        return articleRepository.save(article);
-    }
+        Article updatedArticle = articleRepository.findById(article.getId())
+                .map(oldArticle -> Article.builder()
+                        .id(oldArticle.getId())
+                        .category(article.getCategory())
+                        .introduction(article.getIntroduction())
+                        .publicationDate(article.getPublicationDate())
+                        .title(article.getTitle())
+                        .url(article.getUrl())
+                        .build()
+                ).orElse(article);
 
+        return articleRepository.save(updatedArticle);
+    }
 }
