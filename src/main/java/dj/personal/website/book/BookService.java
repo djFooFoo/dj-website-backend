@@ -1,12 +1,12 @@
 package dj.personal.website.book;
 
-import static java.util.stream.Collectors.toList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Comparator;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import static java.util.stream.Collectors.toList;
 
 /**
  * @author dj
@@ -20,11 +20,14 @@ public class BookService {
 		this.bookRepository = bookRepository;
 	}
 
-	public Collection<BookDto> getBooks() {
+	public Collection<Book> getBooks() {
 		return bookRepository.findAll()
 				.stream()
-				.map(Book::toDTO)
-				.sorted(Comparator.comparing(BookDto::getYearRead).reversed().thenComparing(BookDto::getTitle))
+				.sorted(Comparator.comparing(Book::getYearRead).reversed().thenComparing(Book::getTitle))
 				.collect(toList());
+	}
+
+	public Book save(Book book) {
+		return bookRepository.save(book);
 	}
 }

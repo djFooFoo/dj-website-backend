@@ -2,15 +2,14 @@ package dj.personal.website.article;
 
 import dj.personal.website.Role;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.security.RolesAllowed;
 import java.util.Collection;
 
-@RestController()
+@RestController
+@RequestMapping(path = "api/articles")
 class ArticleController {
 	private final ArticleService articleService;
 
@@ -19,13 +18,13 @@ class ArticleController {
 		this.articleService = articleService;
 	}
 
-	@GetMapping("api/articles")
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@RolesAllowed(Role.ADMIN)
 	public Collection<Article> findAll() {
 		return articleService.findAll();
 	}
 
-	@PutMapping("api/articles")
+	@PutMapping
 	@RolesAllowed(Role.ADMIN)
 	public Article save(@RequestBody Article article) {
 		return articleService.save(article);
