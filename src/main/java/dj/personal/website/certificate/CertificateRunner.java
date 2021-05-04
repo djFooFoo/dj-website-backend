@@ -49,21 +49,25 @@ public class CertificateRunner implements CommandLineRunner {
 				"https://www.coursera.org/account/accomplishments/specialization/SXJNRZSW2FNQ");
 		createAndSaveCertificate("AI For Everyone", LocalDate.of(2019, Month.MARCH, 1), "Coursera", CertificateType.COURSE,
 				"https://www.coursera.org/account/accomplishments/verify/FL5WAVUSXLXE");
-		createAndSaveCertificate("PyTorch: Deep Learning and Artificial Intelligence", LocalDate.of(2020, Month.MAY, 1), "Udemy", CertificateType.COURSE,
-				"https://www.udemy.com/certificate/UC-ae1c4739-0ce8-4153-bc4d-9492d58aed8c/");
 		createAndSaveCertificate("DDD Event Storming", LocalDate.of(2019, Month.JUNE, 26), "Value Object", CertificateType.COURSE, "");
-		createAndSaveCertificate("Ultimate AWS Certified Developer Associate 2020", LocalDate.of(2020, Month.DECEMBER, 20), "Udemy", CertificateType.COURSE,
-				"https://www.udemy.com/certificate/UC-a72146e0-7fd3-43c6-90f6-39d3d4f656ed/");
 		createAndSaveCertificate("dotAI Paris", LocalDate.of(2018, Month.MAY, 31), "DotAI", CertificateType.ATTENDEE, "http://www.dotai.io");
 		createAndSaveCertificate("Re-work Deep Learning Summit London", LocalDate.of(2018, Month.SEPTEMBER, 20), "Re-work", CertificateType.ATTENDEE, "");
 		createAndSaveCertificate("World Summit AI Amsterdam", LocalDate.of(2018, Month.OCTOBER, 10), "Inspired Minds", CertificateType.ATTENDEE, "");
 		createAndSaveCertificate("Devoxx", LocalDate.of(2018, Month.NOVEMBER, 13), "Devoxx", CertificateType.ATTENDEE, "");
 		createAndSaveCertificate("ML Conference Munich", LocalDate.of(2019, Month.JUNE, 18), "S&S Media", CertificateType.ATTENDEE, "");
-		createAndSaveCertificate("ML Conference Online", LocalDate.of(2020, Month.JULY, 29), "S&S Media", CertificateType.ATTENDEE, "");
 		createAndSaveCertificate("Angular Challenge Finalist", LocalDate.of(2019, Month.MAY, 1), "NG-BE, Google, Innovatus, Showpad, EDITx", CertificateType.AWARD,
 				"https://photos.google.com/share/AF1QipMGr_Fnj3VeEW0UJ7GJ_71Imb5zBI6m8JhO99nQPDmf_5mOqX9EtOi4rlBuEtU18Q?key=QXplbTItTExCZGhrd0FCNGMzc3Jwd05EVTJRYVlB");
+		createAndSaveCertificate("Docker for beginners", LocalDate.of(2020, Month.JANUARY, 19), "Udemy", CertificateType.COURSE, "https://www.udemy.com/certificate/UC-KL50738G/");
+		createAndSaveCertificate("Tribe talk: Enhancing Page Visits by Topic Prediction", LocalDate.of(2020, Month.DECEMBER, 8), "Continuum Consulting NV", CertificateType.SPEAKER, "");
+		createAndSaveCertificate("PyTorch: Deep Learning and Artificial Intelligence", LocalDate.of(2020, Month.MAY, 1), "Udemy", CertificateType.COURSE,
+				"https://www.udemy.com/certificate/UC-ae1c4739-0ce8-4153-bc4d-9492d58aed8c/");
+		createAndSaveCertificate("Ultimate AWS Certified Developer Associate 2020", LocalDate.of(2020, Month.DECEMBER, 20), "Udemy", CertificateType.COURSE,
+				"https://www.udemy.com/certificate/UC-a72146e0-7fd3-43c6-90f6-39d3d4f656ed/");
+		createAndSaveCertificate("ML Conference Online", LocalDate.of(2020, Month.JULY, 29), "S&S Media", CertificateType.ATTENDEE, "");
 		createAndSaveCertificate("Angular Challenge Finalist", LocalDate.of(2020, Month.SEPTEMBER, 1), "NG-BE, Google, Innovatus, Showpad, EDITx", CertificateType.AWARD,
 				"");
+		createAndSaveCertificate("Java Summit for Developers", LocalDate.of(2021, Month.MARCH, 31), "Geekle", CertificateType.SPEAKER,
+				"https://java.geekle.us/?utm_source=linkedin&utm_medium=speaker&utm_term=DieterJordens");
 
 		return certificateRepository.findAll();
 	}

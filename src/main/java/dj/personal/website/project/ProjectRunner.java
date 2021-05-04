@@ -72,13 +72,14 @@ public class ProjectRunner implements CommandLineRunner {
 				),
 				ravagoProject);
 
-		Project smalsProject = createAndSaveProject("fa-file", "Smals", "Lead Developer", "September 2018 - present");
+		Project smalsProject = createAndSaveProject("fa-file", "Smals", "Lead Developer", "September 2018 - May 2021");
 		createAndSaveTechnologies(
 				asSet("Java 8", "Spring", "Angular", "Jasmine", "CouchDB", "ElasticSearch",
 						"Mockito", "JUnit", "Nginx", "REST Assured", "AssertJ", "Intellij", "Jira", "Git", "Scrum/Agile",
 						"Keycloak", "Docker", "TypeScript", "Swagger", "Cypress", "Node", "SCSS", "KeyLines", "Jenkins"), smalsProject);
 		createAndSaveResponsibilities(asSet(
-				"This project is subject to confidentiality"), smalsProject);
+				"This project is subject to confidentiality"
+		), smalsProject);
 
 		return projectRepository.findAll();
 	}

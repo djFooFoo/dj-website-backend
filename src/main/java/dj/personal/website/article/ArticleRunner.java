@@ -285,6 +285,27 @@ public class ArticleRunner implements CommandLineRunner {
 				.category("Other")
 				.build());
 
+		articles.add(Article.builder()
+				.title("How To Use Docker in an Amazon EC2 Instance")
+				.publicationDate(LocalDate.of(2021, Month.FEBRUARY, 26))
+				.url("https://betterprogramming.pub/how-to-use-docker-in-an-amazon-ec2-instance-5453601ec330")
+				.category("Other")
+				.build());
+
+		articles.add(Article.builder()
+				.title("The Number Guessing Game Kata")
+				.publicationDate(LocalDate.of(2021, Month.MARCH, 22))
+				.url("https://towardsdatascience.com/number-guessing-game-504b5f3bb0e7")
+				.category("Backend")
+				.build());
+
+		articles.add(Article.builder()
+				.title("Home Workout Using Dumbells")
+				.publicationDate(LocalDate.of(2021, Month.APRIL, 18))
+				.url("https://dieterjordens.medium.com/home-workout-using-dumbells-dcff9402e635")
+				.category("Other")
+				.build());
+
 		return articleRepository.saveAll(articles);
 	}
 }

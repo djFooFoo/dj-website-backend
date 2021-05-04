@@ -128,30 +128,6 @@ public class BookRunner implements CommandLineRunner {
 				.build());
 
 		books.add(Book.builder()
-				.isbn(9780062803832L)
-				.title("Unfu*k Yourself: Get Out of Your Head and Into Your Life")
-				.authors("Bishop, Gary John")
-				.yearRead(2020)
-				.rating(5f)
-				.build());
-
-		books.add(Book.builder()
-				.isbn(9780134052502L)
-				.title("The Software Craftsman: Professionalism, Pragmatism, Pride")
-				.authors("Sandro Mancuso")
-				.yearRead(2020)
-				.rating(4.5f)
-				.build());
-
-		books.add(Book.builder()
-				.isbn(9780321125217L)
-				.title("Domain-Driven Design: Tackling Complexity in the Heart of Software")
-				.authors("Eric Evans")
-				.yearRead(2020)
-				.rating(3f)
-				.build());
-
-		books.add(Book.builder()
 				.isbn(9781491954164L)
 				.title("Java 9 Modularity: Patterns and practices for developing maintainable applications")
 				.authors("Sander Mak and Paul Baker")
@@ -252,6 +228,46 @@ public class BookRunner implements CommandLineRunner {
 				.title("Soft Skills: The software developer's life manual")
 				.authors("John Sonmez")
 				.yearRead(2020)
+				.rating(4.5f)
+				.build());
+
+		books.add(Book.builder()
+				.isbn(9780062803832L)
+				.title("Unfu*k Yourself: Get Out of Your Head and Into Your Life")
+				.authors("Bishop, Gary John")
+				.yearRead(2020)
+				.rating(5f)
+				.build());
+
+		books.add(Book.builder()
+				.isbn(9780134052502L)
+				.title("The Software Craftsman: Professionalism, Pragmatism, Pride")
+				.authors("Sandro Mancuso")
+				.yearRead(2020)
+				.rating(4.5f)
+				.build());
+
+		books.add(Book.builder()
+				.isbn(9780321125217L)
+				.title("Domain-Driven Design: Tackling Complexity in the Heart of Software")
+				.authors("Eric Evans")
+				.yearRead(2020)
+				.rating(3f)
+				.build());
+
+		books.add(Book.builder()
+				.isbn(9781119335573L)
+				.title("Public Speaking Skills")
+				.authors("Alyson Connolly")
+				.yearRead(2021)
+				.rating(3f)
+				.build());
+
+		books.add(Book.builder()
+				.isbn(9780132980937L)
+				.title("How to Argue - Powerfully, Persuasively, Positively")
+				.authors("Jonathan Herring")
+				.yearRead(2021)
 				.rating(4.5f)
 				.build());
 

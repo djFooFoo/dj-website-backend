@@ -6,6 +6,7 @@ enum CertificateType {
 	COURSE,
 	CERTIFICATE,
 	AWARD,
+	SPEAKER,
 	ATTENDEE;
 
 	@JsonValue
