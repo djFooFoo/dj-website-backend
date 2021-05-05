@@ -24,11 +24,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Value("${cors.allowCredentials}")
 	private Optional<Boolean> allowCredentials = Optional.empty();
 
+	@Value("${DJ_BACKEND_SPRING_SECURITY_USER:admin}")
+	private String user;
+
+	@Value("${DJ_BACKEND_SPRING_SECURITY_PASSWORD:{noop}EenEenvoudigWachtwoord}")
+	private String password;
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
-				.withUser("admin")
-				.password("{noop}EenEenvoudigWachtwoord")
+				.withUser(user)
+				.password(password)
 				.roles(Role.ADMIN);
 	}
 
@@ -50,7 +56,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	public CorsConfigurationSource corsConfigurationSource(
 			@Value("#{'${cors.allowed.origins}'.split(',')}") List<String> allowedOrigins,
 			@Value("#{'${cors.allowed.methods}'.split(',')}") List<String> allowedMethods,
-			@Value("#{'${cors.resolvedMethods}'.split(',')}") List<String> resolvedMethods,
 			@Value("#{'${cors.allowedHeaders}'.split(',')}") List<String> allowedHeaders,
 			@Value("#{'${cors.exposedHeaders}'.split(',')}") List<String> exposedHeaders) {
 		CorsConfiguration configuration = new CorsConfiguration();
