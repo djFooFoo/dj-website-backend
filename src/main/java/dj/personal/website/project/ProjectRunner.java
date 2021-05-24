@@ -81,6 +81,13 @@ public class ProjectRunner implements CommandLineRunner {
 				"This project is subject to confidentiality"
 		), smalsProject);
 
+		Project aquafinProject = createAndSaveProject("fa-water", "Aquafin", "Software & Data Engineer", "May 2021 - Present");
+		createAndSaveTechnologies(asSet("Java 11", "Spring", "Swagger", "JWT", "Intellij", "Jira", "Git", "Scrum/Agile", "Jenkins"), aquafinProject);
+
+		createAndSaveTechnologies(asSet(
+				"Backend development of a new application"
+		), aquafinProject);
+
 		return projectRepository.findAll();
 	}
 
