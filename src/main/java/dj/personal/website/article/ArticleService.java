@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Optional;
 
 import static java.util.stream.Collectors.toList;
 
@@ -24,7 +25,12 @@ public class ArticleService {
                 .collect(toList());
     }
 
-    public Article save(Article article) {
-        return articleRepository.save(article);
+    public Article saveIfNotExists(Article article) {
+        return articleRepository.findByUrl(article.getUrl())
+                .orElseGet(() -> articleRepository.save(article));
+    }
+
+    public void deleteById(Long id) {
+        articleRepository.deleteById(id);
     }
 }

@@ -27,6 +27,12 @@ class ArticleController {
 	@PutMapping
 	@RolesAllowed(Role.ADMIN)
 	public Article save(@RequestBody Article article) {
-		return articleService.save(article);
+		return articleService.saveIfNotExists(article);
+	}
+
+	@DeleteMapping(path = "/{id}")
+	@RolesAllowed(Role.ADMIN)
+	public void delete(@PathVariable Long id){
+		articleService.deleteById(id);
 	}
 }
