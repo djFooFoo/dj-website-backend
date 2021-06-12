@@ -30,4 +30,8 @@ public class BookService {
 	public Book save(Book book) {
 		return bookRepository.save(book);
 	}
+
+	public void deleteByIsbn(Long isbn) {
+		bookRepository.deleteByIsbn(isbn);
+	}
 }

@@ -29,4 +29,10 @@ class BookController {
 	public Book save(@RequestBody Book book) {
 		return bookService.save(book);
 	}
+
+	@DeleteMapping(path = "/{isbn}")
+	@RolesAllowed(Role.ADMIN)
+	public void delete(@PathVariable Long isbn){
+		bookService.deleteByIsbn(isbn);
+	}
 }
