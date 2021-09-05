@@ -5,7 +5,7 @@ COPY pom.xml app
 RUN mvn -f app/pom.xml clean package -DskipTests
 
 FROM openjdk:15-jdk
-EXPOSE 8080
+EXPOSE 10000
 RUN mkdir /app
 COPY --from=build app/target/*.jar /app/application.jar
 
