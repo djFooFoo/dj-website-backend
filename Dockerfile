@@ -4,7 +4,7 @@ COPY src app/src
 COPY pom.xml app
 RUN mvn -f app/pom.xml clean package -DskipTests
 
-FROM openjdk:15-jdk
+FROM adoptopenjdk/openjdk15:x86_64-ubuntu-jre15u-nightly
 EXPOSE 10000
 RUN mkdir /app
 COPY --from=build app/target/*.jar /app/application.jar
