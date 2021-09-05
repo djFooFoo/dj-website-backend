@@ -32,6 +32,6 @@ public class BookService {
 	}
 
 	public void deleteByIsbn(Long isbn) {
-		bookRepository.deleteByIsbn(isbn);
+		bookRepository.deleteById(isbn);
 	}
 }
